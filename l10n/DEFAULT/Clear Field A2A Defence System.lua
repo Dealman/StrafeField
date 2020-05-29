@@ -144,8 +144,8 @@ function SEF_REDDISPATCHERON()
 	--REDA2ADispatcher:SetDefaultTakeoffFromParkingHot("Theta")
 	--REDA2ADispatcher:SetDefaultTakeoffFromParkingHot("Omicron")
 
-	REDA2ADispatcher:SetEngageRadius( 200000 )	
-	REDA2ADispatcher:SetDisengageRadius( 260000 )
+	REDA2ADispatcher:SetEngageRadius( 80000 )	
+	REDA2ADispatcher:SetDisengageRadius( 100000 )
 	
 	--trigger.action.outText("Red Air Dispatcher Is Now Enabled", 15)
 end
