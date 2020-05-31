@@ -10,7 +10,7 @@
 function SEF_MissionSelector( TaskNumber )	
 
 	--DEBUG
-	trigger.action.outText("Called MissionSelector with TaskNumber "..TaskNumber, 5)
+	--trigger.action.outText("Called MissionSelector with TaskNumber "..TaskNumber, 5)
 	
 	if ( NumberOfCompletedMissions >= TotalScenarios ) then
 			
@@ -237,7 +237,7 @@ end
 function MissionSuccess(TaskNumber)
 
 	--DEBUG
-	trigger.action.outText("Called MissionSuccess with TaskNumber "..TaskNumber, 5)
+	--trigger.action.outText("Called MissionSuccess with TaskNumber "..TaskNumber, 5)
 	
 	if (TaskNumber == 1) then
 		--SET GLOBALS TO NIL
@@ -329,7 +329,7 @@ function SEF_Mission2TargetStatus(TimeLoop, time)
 		if ( StaticObject.getByName(AGMission2Target) ~= nil and StaticObject.getByName(AGMission2Target):isExist() == true ) then
 			--STATIC ALIVE
 			--DEBUG 
-			trigger.action.outText("Target still alive (static)", 5)
+			--trigger.action.outText("Target still alive (static)", 5)
 			return time + 10				
 		else				
 			--STATIC DESTROYED
@@ -343,7 +343,7 @@ function SEF_Mission2TargetStatus(TimeLoop, time)
 		end		
 	else
 		--DEBUG 
-		trigger.action.outText("Do Nothing", 5)
+		--trigger.action.outText("Do Nothing", 5)
 		return time + 10
 	end	
 end
@@ -1277,8 +1277,8 @@ function Target2Report()
 			trigger.action.outText("Target Report Unavailable", 15)
 		end
 		
-	elseif (AGTargetTypeStatic == true and AGMissionTarget ~=nil) then
-		TargetGroup = STATIC:FindByName(AGMissionTarget, false)
+	elseif (AGTarget2TypeStatic == true and AGMission2Target ~=nil) then
+		TargetGroup = STATIC:FindByName(AGMission2Target, false)
 		
 		MissionPlayersBlue = SET_CLIENT:New():FilterCoalitions("blue"):FilterActive():FilterOnce()
 
@@ -1402,8 +1402,8 @@ function Target3Report()
 			trigger.action.outText("Target Report Unavailable", 15)
 		end
 		
-	elseif (AGTargetTypeStatic == true and AGMissionTarget ~=nil) then
-		TargetGroup = STATIC:FindByName(AGMissionTarget, false)
+	elseif (AGTarget3TypeStatic == true and AGMission3Target ~=nil) then
+		TargetGroup = STATIC:FindByName(AGMission3Target, false)
 		
 		MissionPlayersBlue = SET_CLIENT:New():FilterCoalitions("blue"):FilterActive():FilterOnce()
 
