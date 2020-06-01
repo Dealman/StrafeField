@@ -7,6 +7,10 @@
 --////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 --////MISSION LOGIC FUNCTIONS
 
+
+GLOBAL_JTAC_RADIO_ADDED = {} --keeps track of who's had the radio command added
+
+
 function SEF_MissionSelector( TaskNumber )	
 
 	--DEBUG
@@ -403,641 +407,641 @@ function SEF_InitializeMissionTable()
 	OperationClearField_AG[1] = {
 		TargetName = "Kvemo Roka - AAA 1",
 		TargetStatic = false,
-		TargetBriefing = "Primary Objective - Destroy AAA assets located at Kvemo-Roka\nKvemo-Roka Sector - Grid MN21",
+		TargetBriefing = "Destroy AAA assets located at Kvemo-Roka\nKvemo-Roka Sector - Grid MN21",
 	}			
 	OperationClearField_AG[2] = {	
 		TargetName = "Kvemo Roka - Armor 1",
 		TargetStatic = false,
-		TargetBriefing = "Primary Objective - Destroy the T-90 Tanks located at Kvemo-Roka\nKvemo-Roka Sector - Grid MN21",				
+		TargetBriefing = "Destroy the T-90 Tanks located at Kvemo-Roka\nKvemo-Roka Sector - Grid MN21",				
 	}			
 	OperationClearField_AG[3] = {
 		TargetName = "Kvemo Roka - Armor 2",
 		TargetStatic = false,
-		TargetBriefing = "Primary Objective - Destroy APC's and IFV's located at Zemo-Roka\nKvemo-Roka Sector - Grid MN21",
+		TargetBriefing = "Destroy APC's and IFV's located at Zemo-Roka\nKvemo-Roka Sector - Grid MN21",
 	}					
 	OperationClearField_AG[4] = {
 		TargetName = "Kvemo Roka - Armor 3",
 		TargetStatic = false,
-		TargetBriefing = "Primary Objective - Destroy APC's and IFV's located at Elbakita\nKvemo-Roka Sector - Grid MM19",
+		TargetBriefing = "Destroy APC's and IFV's located at Elbakita\nKvemo-Roka Sector - Grid MM19",
 	}					
 	OperationClearField_AG[5] = {
 		TargetName = "Kvemo Roka - SAM 1",
 		TargetStatic = false,
-		TargetBriefing = "Primary Objective - Destroy the SA-19 SAM located at Kvemo-Roka\nKvemo-Roka Sector - Grid MN21",
+		TargetBriefing = "Destroy the SA-19 SAM located at Kvemo-Roka\nKvemo-Roka Sector - Grid MN21",
 	}			
 	OperationClearField_AG[6] = {
 		TargetName = "Kvemo Roka - Supply 1",
 		TargetStatic = false,
-		TargetBriefing = "Primary Objective - Destroy the Supply Trucks located at Kvemo-Roka\nKvemo-Roka Sector - Grid MN21",
+		TargetBriefing = "Destroy the Supply Trucks located at Kvemo-Roka\nKvemo-Roka Sector - Grid MN21",
 	}			
 	OperationClearField_AG[7] = {
 		TargetName = "Kvemo Roka - Convoy 1",
 		TargetStatic = false,
-		TargetBriefing = "Primary Objective - Destroy the Convoy located at Kvemo-Sba\nKvemo-Roka Sector - Grid MN31",
+		TargetBriefing = "Destroy the Convoy located at Kvemo-Sba\nKvemo-Roka Sector - Grid MN31",
 	}					
 	--GORI
 	OperationClearField_AG[8] = {
 		TargetName = "Gori - AAA 1",
 		TargetStatic = false,
-		TargetBriefing = "Primary Objective - Destroy AAA assets located South of Dzevera\nGori Sector - Grid MM26",
+		TargetBriefing = "Destroy AAA assets located South of Dzevera\nGori Sector - Grid MM26",
 	}					
 	OperationClearField_AG[9] = {
 		TargetName = "Gori - AAA 2",
 		TargetStatic = false,
-		TargetBriefing = "Primary Objective - Destroy AAA assets located at Gori\nGori Sector - Grid MM24",
+		TargetBriefing = "Destroy AAA assets located at Gori\nGori Sector - Grid MM24",
 	}					
 	OperationClearField_AG[10] = {
 		TargetName = "Gori - AAA 3",
 		TargetStatic = false,
-		TargetBriefing = "Primary Objective - Destroy AAA assets located at Ruisi\nGori Sector - Grid MM15",
+		TargetBriefing = "Destroy AAA assets located at Ruisi\nGori Sector - Grid MM15",
 	}					
 	OperationClearField_AG[11] = {
 		TargetName = "Gori - Armor 1",
 		TargetStatic = false,
-		TargetBriefing = "Primary Objective - Destroy the T-90 Tanks located South of Dzevera\nGori Sector - Grid MM26",		
+		TargetBriefing = "Destroy the T-90 Tanks located South of Dzevera\nGori Sector - Grid MM26",		
 	}			
 	OperationClearField_AG[12] = {
 		TargetName = "Gori - Armor 2",
 		TargetStatic = false,
-		TargetBriefing = "Primary Objective - Destroy the T-80 Tanks located at Gori\nGori Sector - Grid MM24",
+		TargetBriefing = "Destroy the T-80 Tanks located at Gori\nGori Sector - Grid MM24",
 	}			
 	OperationClearField_AG[13] = {
 		TargetName = "Gori - Armor 3",
 		TargetStatic = false,
-		TargetBriefing = "Primary Objective - Destroy the T-90 Tanks located at Ruisi\nGori Sector - Grid MM15",
+		TargetBriefing = "Destroy the T-90 Tanks located at Ruisi\nGori Sector - Grid MM15",
 	}			
 	OperationClearField_AG[14] = {
 		TargetName = "Gori - Artillery 1",
 		TargetStatic = false,
-		TargetBriefing = "Primary Objective - Destroy the Artillery located South of Dzevera\nGori Sector - Grid MM26",
+		TargetBriefing = "Destroy the Artillery located South of Dzevera\nGori Sector - Grid MM26",
 	}			
 	OperationClearField_AG[15] = {
 		TargetName = "Gori - Artillery 2",
 		TargetStatic = false,
-		TargetBriefing = "Primary Objective - Destroy the Artillery located at Gori\nGori Sector - Grid MM24",
+		TargetBriefing = "Destroy the Artillery located at Gori\nGori Sector - Grid MM24",
 	}
 	OperationClearField_AG[16] = {
 		TargetName = "Gori - Artillery 3",
 		TargetStatic = false,
-		TargetBriefing = "Primary Objective - Destroy the Artillery located at Ruisi\nGori Sector - Grid MM15",
+		TargetBriefing = "Destroy the Artillery located at Ruisi\nGori Sector - Grid MM15",
 	}
 	OperationClearField_AG[17] = {
 		TargetName = "Gori - SAM 1",
 		TargetStatic = false,
-		TargetBriefing = "Primary Objective - Destroy the Mobile SA-19 SAM located South of Dzevera\nGori Sector - Grid MM26",	
+		TargetBriefing = "Destroy the Mobile SA-19 SAM located South of Dzevera\nGori Sector - Grid MM26",	
 	}
 	OperationClearField_AG[18] = {
 		TargetName = "Gori - SAM 2",
 		TargetStatic = false,
-		TargetBriefing = "Primary Objective - Destroy the Mobile SA-15 SAM located at Gori\nGori Sector - Grid MM24",
+		TargetBriefing = "Destroy the Mobile SA-15 SAM located at Gori\nGori Sector - Grid MM24",
 	}
 	OperationClearField_AG[19] = {
 		TargetName = "Gori - Supply 1",
 		TargetStatic = false,
-		TargetBriefing = "Primary Objective - Destroy the Supply Trucks located South of Dzevera\nGori Sector - Grid MM26",
+		TargetBriefing = "Destroy the Supply Trucks located South of Dzevera\nGori Sector - Grid MM26",
 	}
 	OperationClearField_AG[20] = {
 		TargetName = "Gori - Supply 2",
 		TargetStatic = false,
-		TargetBriefing = "Primary Objective - Destroy the Supply Trucks located at Gori\nGori Sector - Grid MM24",
+		TargetBriefing = "Destroy the Supply Trucks located at Gori\nGori Sector - Grid MM24",
 	}	
 	OperationClearField_AG[21] = {
 		TargetName = "Gori - Command 1",
 		TargetStatic = false,
-		TargetBriefing = "Primary Objective - Destroy the Mobile Command Post located at Ruisi\nGori Sector - Grid MM15",
+		TargetBriefing = "Destroy the Mobile Command Post located at Ruisi\nGori Sector - Grid MM15",
 	}
 	--GUDAUTA
 	OperationClearField_AG[22] = {
 		TargetName = "Gudauta - AAA 1",
 		TargetStatic = false,
-		TargetBriefing = "Primary Objective - Destroy AAA assets North of Gudauta Airbase\nGudauta Sector - Grid FH27",
+		TargetBriefing = "Destroy AAA assets North of Gudauta Airbase\nGudauta Sector - Grid FH27",
 	}
 	OperationClearField_AG[23] = {
 		TargetName = "Gudauta - AAA 2",
 		TargetStatic = false,
-		TargetBriefing = "Primary Objective - Destroy AAA assets at Gudauta\nGudauta Sector - Grid FH37",
+		TargetBriefing = "Destroy AAA assets at Gudauta\nGudauta Sector - Grid FH37",
 	}
 	OperationClearField_AG[24] = {
 		TargetName = "Gudauta - Bomber 1",
 		TargetStatic = true,
-		TargetBriefing = "Primary Objective - Destroy the Mi-24V Attack Helicopter being refuelled North of Gudauta Airbase\nGudauta Sector - Grid FH27",
+		TargetBriefing = "Destroy the Mi-24V Attack Helicopter being refuelled North of Gudauta Airbase\nGudauta Sector - Grid FH27",
 	}
 	OperationClearField_AG[25] = {
 		TargetName = "Gudauta - Navy 1",
 		TargetStatic = false,
-		TargetBriefing = "Primary Objective - Destroy the Naval Vessels South of Pitsunda\nGudauta Sector - Grid FH16",
+		TargetBriefing = "Destroy the Naval Vessels South of Pitsunda\nGudauta Sector - Grid FH16",
 	}
 	OperationClearField_AG[26] = {
 		TargetName = "Gudauta - SAM 1",
 		TargetStatic = false,
-		TargetBriefing = "Primary Objective - Destroy the Mobile SA-15 SAM North of Gudauta Airbase\nGudauta Sector - Grid FH27",
+		TargetBriefing = "Destroy the Mobile SA-15 SAM North of Gudauta Airbase\nGudauta Sector - Grid FH27",
 	}
 	OperationClearField_AG[27] = {
 		TargetName = "Gudauta - Supply 1",
 		TargetStatic = false,
-		TargetBriefing = "Primary Objective - Destroy the Supply Trucks at Adzhapsha\nGudauta Sector - Grid FH47",
+		TargetBriefing = "Destroy the Supply Trucks at Adzhapsha\nGudauta Sector - Grid FH47",
 	}
 	OperationClearField_AG[28] = {
 		TargetName = "Gudauta - Supply 2",
 		TargetStatic = false,
-		TargetBriefing = "Primary Objective - Destroy the Supply Trucks North of Gudauta Airbase\nGudauta Sector - Grid FH27",
+		TargetBriefing = "Destroy the Supply Trucks North of Gudauta Airbase\nGudauta Sector - Grid FH27",
 	}
 	OperationClearField_AG[29] = {
 		TargetName = "Gudauta - Comms",
 		TargetStatic = true,
-		TargetBriefing = "Primary Objective - Destroy the Communications Tower located West of Achkatsa\nGudauta Sector - Grid FH37",
+		TargetBriefing = "Destroy the Communications Tower located West of Achkatsa\nGudauta Sector - Grid FH37",
 	}
 	OperationClearField_AG[30] = {
 		TargetName = "Gudauta - Military HQ",
 		TargetStatic = true,
-		TargetBriefing = "Primary Objective - Destroy the Military HQ at Gudauta\nGudauta Sector - Grid FH37",
+		TargetBriefing = "Destroy the Military HQ at Gudauta\nGudauta Sector - Grid FH37",
 	}
 	--////Major SAM Site
 	OperationClearField_AG[31] = {
 		TargetName = "Gudauta - SA-10",
 		TargetStatic = false,
-		TargetBriefing = "Primary Objective - Destroy the SA-10 site at Adzhapsha\nGudauta Sector - Grid FH47",
+		TargetBriefing = "Destroy the SA-10 site at Adzhapsha\nGudauta Sector - Grid FH47",
 	}
 	--OCHAMCHIRA
 	OperationClearField_AG[32] = {
 		TargetName = "Ochamchira - AAA 1",
 		TargetStatic = false,
-		TargetBriefing = "Primary Objective - Destroy AAA assets located at Ochamchira\nOchamchira Sector - Grid GH03",
+		TargetBriefing = "Destroy AAA assets located at Ochamchira\nOchamchira Sector - Grid GH03",
 	}
 	OperationClearField_AG[33] = {
 		TargetName = "Ochamchira - AAA 2",
 		TargetStatic = false,
-		TargetBriefing = "Primary Objective - Destroy AAA assets located at Repo-Etseri\nOchamchira Sector - Grid GH12",
+		TargetBriefing = "Destroy AAA assets located at Repo-Etseri\nOchamchira Sector - Grid GH12",
 	}
 	OperationClearField_AG[34] = {
 		TargetName = "Ochamchira - Armor 1",
 		TargetStatic = false,
-		TargetBriefing = "Primary Objective - Destroy the IFV's located East of Ochamchira\nOchamchira Sector - Grid GH03",
+		TargetBriefing = "Destroy the IFV's located East of Ochamchira\nOchamchira Sector - Grid GH03",
 	}
 	OperationClearField_AG[35] = {
 		TargetName = "Ochamchira - Cargo Ships 1",
 		TargetStatic = false,
-		TargetBriefing = "Primary Objective - Destroy the Cargo Ships East of Ochamchira\nOchamchira Sector - Grid FH92",
+		TargetBriefing = "Destroy the Cargo Ships East of Ochamchira\nOchamchira Sector - Grid FH92",
 	}
 	OperationClearField_AG[36] = {
 		TargetName = "Ochamchira - Navy 1",
 		TargetStatic = false,
-		TargetBriefing = "Primary Objective - Destroy the Naval Vessels South of Ahali-Kindgi\nOchamchira Sector - Grid FH82",
+		TargetBriefing = "Destroy the Naval Vessels South of Ahali-Kindgi\nOchamchira Sector - Grid FH82",
 	}
 	OperationClearField_AG[37] = {
 		TargetName = "Ochamchira - SAM 1",
 		TargetStatic = false,
-		TargetBriefing = "Primary Objective - Destroy the Mobile SAM located at Ochamchira\nOchamchira Sector - Grid GH03",
+		TargetBriefing = "Destroy the Mobile SAM located at Ochamchira\nOchamchira Sector - Grid GH03",
 	}
 	OperationClearField_AG[38] = {
 		TargetName = "Ochamchira - Train Station",
 		TargetStatic = true,
-		TargetBriefing = "Primary Objective - Destroy the Train Station located at Ochamchira\nOchamchira Sector - Grid GH03",
+		TargetBriefing = "Destroy the Train Station located at Ochamchira\nOchamchira Sector - Grid GH03",
 	}
 	OperationClearField_AG[39] = {
 		TargetName = "Ochamchira - Comms",
 		TargetStatic = true,
-		TargetBriefing = "Primary Objective - Destroy the Communications Tower located at Ochamchira\nOchamchira Sector - Grid GH03",
+		TargetBriefing = "Destroy the Communications Tower located at Ochamchira\nOchamchira Sector - Grid GH03",
 	}
 	OperationClearField_AG[40] = {
 		TargetName = "Ochamchira - Military HQ",
 		TargetStatic = true,
-		TargetBriefing = "Primary Objective - Destroy the Military HQ at Ochamchira\nOchamchira Sector - Grid GH03",
+		TargetBriefing = "Destroy the Military HQ at Ochamchira\nOchamchira Sector - Grid GH03",
 	}	
 	--////SOCHI
 	OperationClearField_AG[41] = {
 		TargetName = "Sochi - AAA 1",
 		TargetStatic = false,
-		TargetBriefing = "Primary Objective - Destroy AAA assets at the Sochi docks\nSochi Sector - Grid EJ52",
+		TargetBriefing = "Destroy AAA assets at the Sochi docks\nSochi Sector - Grid EJ52",
 	}
 	OperationClearField_AG[42] = {
 		TargetName = "Sochi - Cargo Ships 1",
 		TargetStatic = false,
-		TargetBriefing = "Primary Objective - Destroy the Cargo Ships docked at Sochi docks\nSochi Sector - Grid EJ52",
+		TargetBriefing = "Destroy the Cargo Ships docked at Sochi docks\nSochi Sector - Grid EJ52",
 	}
 	OperationClearField_AG[43] = {
 		TargetName = "Sochi - Cargo Ships 2",
 		TargetStatic = false,
-		TargetBriefing = "Primary Objective - Destroy the Cargo Ships South-West of Adler\nSochi Sector - Grid EJ60",
+		TargetBriefing = "Destroy the Cargo Ships South-West of Adler\nSochi Sector - Grid EJ60",
 	}
 	OperationClearField_AG[44] = {
 		TargetName = "Sochi - Navy 1",
 		TargetStatic = false,
-		TargetBriefing = "Primary Objective - Destroy the Naval Vessels South-West of Sochi docks\nSochi Sector - Grid EJ52",
+		TargetBriefing = "Destroy the Naval Vessels South-West of Sochi docks\nSochi Sector - Grid EJ52",
 	}
 	OperationClearField_AG[45] = {
 		TargetName = "Sochi - Navy 2",
 		TargetStatic = false,
-		TargetBriefing = "Primary Objective - Destroy the Submarines docked at Sochi docks\nSochi Sector - Grid EJ52",
+		TargetBriefing = "Destroy the Submarines docked at Sochi docks\nSochi Sector - Grid EJ52",
 	}	
 	OperationClearField_AG[46] = {
 		TargetName = "Sochi - Supply 1",
 		TargetStatic = false,
-		TargetBriefing = "Primary Objective - Destroy the Supply Trucks at the SA-11 site West of Dagomys\nSochi Sector - Grid EJ53",
+		TargetBriefing = "Destroy the Supply Trucks at the SA-11 site West of Dagomys\nSochi Sector - Grid EJ53",
 	}
 	OperationClearField_AG[47] = {
 		TargetName = "Sochi - Comms",
 		TargetStatic = true,
-		TargetBriefing = "Primary Objective - Destroy the Communications Tower North-West of Razdol'noe\nSochi Sector - Grid EJ62",	
+		TargetBriefing = "Destroy the Communications Tower North-West of Razdol'noe\nSochi Sector - Grid EJ62",	
 	}
 	--////Major SAM Site
 	OperationClearField_AG[48] = {
 		TargetName = "Sochi - SA-11",
 		TargetStatic = false,
-		TargetBriefing = "Primary Objective - Destroy the SA-11 site West of Dagomys\nSochi Sector - Grid EJ53",
+		TargetBriefing = "Destroy the SA-11 site West of Dagomys\nSochi Sector - Grid EJ53",
 	}
 	--SUKHUMI
 	OperationClearField_AG[49] = {
 		TargetName = "Sukhumi - AAA 1",
 		TargetStatic = false,
-		TargetBriefing = "Primary Objective - Destroy AAA assets located at Sukhumi\nSukhumi Sector - Grid FH66",
+		TargetBriefing = "Destroy AAA assets located at Sukhumi\nSukhumi Sector - Grid FH66",
 	}
 	OperationClearField_AG[50] = {
 		TargetName = "Sukhumi - Cargo Ships 1",
 		TargetStatic = false,
-		TargetBriefing = "Primary Objective - Destroy the Cargo Ships South-West of Sukhumi\nSukhumi Sector - Grid FH55",
+		TargetBriefing = "Destroy the Cargo Ships South-West of Sukhumi\nSukhumi Sector - Grid FH55",
 	}
 	OperationClearField_AG[51] = {
 		TargetName = "Sukhumi - Cargo Ships 2",
 		TargetStatic = false,
-		TargetBriefing = "Primary Objective - Destroy the Cargo Ships at Kvemo-Merheuli Docks\nSukhumi Sector - Grid FH65",
+		TargetBriefing = "Destroy the Cargo Ships at Kvemo-Merheuli Docks\nSukhumi Sector - Grid FH65",
 	}	
 	OperationClearField_AG[52] = {
 		TargetName = "Sukhumi - Navy 1",
 		TargetStatic = false,
-		TargetBriefing = "Primary Objective - Destroy the Naval Vessels West of Varcha\nSukhumi Sector - Grid FH54",
+		TargetBriefing = "Destroy the Naval Vessels West of Varcha\nSukhumi Sector - Grid FH54",
 	}
 	OperationClearField_AG[53] = {
 		TargetName = "Sukhumi - SAM 1",
 		TargetStatic = false,
-		TargetBriefing = "Primary Objective - Destroy the Mobile SAM located at Gumista\nSukhumi Sector - Grid FH56",
+		TargetBriefing = "Destroy the Mobile SAM located at Gumista\nSukhumi Sector - Grid FH56",
 	}
 	OperationClearField_AG[54] = {
 		TargetName = "Sukhumi - SAM 2",
 		TargetStatic = false,
-		TargetBriefing = "Primary Objective - Destroy the Mobile SAM located at Sukhumi\nSukhumi Sector - Grid FH66",
+		TargetBriefing = "Destroy the Mobile SAM located at Sukhumi\nSukhumi Sector - Grid FH66",
 	}
 	OperationClearField_AG[55] = {
 		TargetName = "Sukhumi - Supply 1",
 		TargetStatic = false,
-		TargetBriefing = "Primary Objective - Destroy the Supply Trucks at the SA-10 site at Gul'ripsh\nSukhumi Sector - Grid FH75",
+		TargetBriefing = "Destroy the Supply Trucks at the SA-10 site at Gul'ripsh\nSukhumi Sector - Grid FH75",
 	}	
 	OperationClearField_AG[56] = {
 		TargetName = "Sukhumi - Supply 2",
 		TargetStatic = false,
-		TargetBriefing = "Primary Objective - Destroy the Supply Trucks located at Sukhumi\nSukhumi Sector - Grid FH66",
+		TargetBriefing = "Destroy the Supply Trucks located at Sukhumi\nSukhumi Sector - Grid FH66",
 	}	
 	OperationClearField_AG[57] = {
 		TargetName = "Sukhumi - Train Station",
 		TargetStatic = true,
-		TargetBriefing = "Primary Objective - Destroy the Train Station located at Gumista\nSukhumi Sector - Grid FH56",	
+		TargetBriefing = "Destroy the Train Station located at Gumista\nSukhumi Sector - Grid FH56",	
 	}	
 	OperationClearField_AG[58] = {
 		TargetName = "Sukhumi - Comms",
 		TargetStatic = true,
-		TargetBriefing = "Primary Objective - Destroy the Communications Tower North of Tavisupleba\nSukhumi Sector - Grid FH66",	
+		TargetBriefing = "Destroy the Communications Tower North of Tavisupleba\nSukhumi Sector - Grid FH66",	
 	}	
 	--////Major SAM Site
 	OperationClearField_AG[59] = {
 		TargetName = "Sukhumi - SA-10",
 		TargetStatic = false,
-		TargetBriefing = "Primary Objective - Destroy the SA-10 site at Gul'ripsh\nSukhumi Sector - Grid FH75",	
+		TargetBriefing = "Destroy the SA-10 site at Gul'ripsh\nSukhumi Sector - Grid FH75",	
 	}	
 	--TKVARCHELI
 	OperationClearField_AG[60] = {
 		TargetName = "Tkvarcheli - AAA 1",
 		TargetStatic = false,
-		TargetBriefing = "Primary Objective - Destroy AAA assets located at Tkvarcheli\nTkvarcheli Sector - Grid GH14",
+		TargetBriefing = "Destroy AAA assets located at Tkvarcheli\nTkvarcheli Sector - Grid GH14",
 	}
 	OperationClearField_AG[61] = {
 		TargetName = "Tkvarcheli - AAA 2",
 		TargetStatic = false,
-		TargetBriefing = "Primary Objective - Destroy AAA assets located at Agvavera\nTkvarcheli Sector - Grid GH23",
+		TargetBriefing = "Destroy AAA assets located at Agvavera\nTkvarcheli Sector - Grid GH23",
 	}	
 	OperationClearField_AG[62] = {
 		TargetName = "Tkvarcheli - AAA 3",
 		TargetStatic = false,
-		TargetBriefing = "Primary Objective - Destroy AAA assets located at the Enguri Dam\nTkvarcheli Sector - Grid KN53",
+		TargetBriefing = "Destroy AAA assets located at the Enguri Dam\nTkvarcheli Sector - Grid KN53",
 	}	
 	OperationClearField_AG[63] = {
 		TargetName = "Tkvarcheli - Armor 1",
 		TargetStatic = false,
-		TargetBriefing = "Primary Objective - Destroy APC's and IFV's located at Tkvarcheli\nTkvarcheli Sector - Grid GH14",
+		TargetBriefing = "Destroy APC's and IFV's located at Tkvarcheli\nTkvarcheli Sector - Grid GH14",
 	}
 	OperationClearField_AG[64] = {
 		TargetName = "Tkvarcheli - Armor 2",
 		TargetStatic = false,
-		TargetBriefing = "Primary Objective - Destroy the Armored Vehicles located at the Enguri Dam\nTkvarcheli Sector - Grid KN53",
+		TargetBriefing = "Destroy the Armored Vehicles located at the Enguri Dam\nTkvarcheli Sector - Grid KN53",
 	}
 	OperationClearField_AG[65] = {
 		TargetName = "Tkvarcheli - Military HQ",
 		TargetStatic = true,
-		TargetBriefing = "Primary Objective - Destroy the Military HQ at Agvavera\nTkvarcheli Sector - Grid GH23",
+		TargetBriefing = "Destroy the Military HQ at Agvavera\nTkvarcheli Sector - Grid GH23",
 	}
 	OperationClearField_AG[66] = {
 		TargetName = "Tkvarcheli - SAM 1",
 		TargetStatic = false,
-		TargetBriefing = "Primary Objective - Destroy the Mobile SAM at Agvavera\nTkvarcheli Sector - Grid GH23",
+		TargetBriefing = "Destroy the Mobile SAM at Agvavera\nTkvarcheli Sector - Grid GH23",
 	}
 	OperationClearField_AG[67] = {
 		TargetName = "Tkvarcheli - Supply 1",
 		TargetStatic = false,
-		TargetBriefing = "Primary Objective - Destroy the Supply Trucks located at Agvavera\nTkvarcheli Sector - Grid GH23",
+		TargetBriefing = "Destroy the Supply Trucks located at Agvavera\nTkvarcheli Sector - Grid GH23",
 	}	
 	OperationClearField_AG[68] = {
 		TargetName = "Tkvarcheli - Comms",
 		TargetStatic = true,
-		TargetBriefing = "Primary Objective - Destroy the Communications Tower on the mountain top North of the three rivers\nTkvarcheli Sector - Grid GH34",	
+		TargetBriefing = "Destroy the Communications Tower on the mountain top North of the three rivers\nTkvarcheli Sector - Grid GH34",	
 	}
 	--TSKHINVALI
 	OperationClearField_AG[69] = {
 		TargetName = "Tskhinvali - AAA 1",
 		TargetStatic = false,
-		TargetBriefing = "Primary Objective - Destroy AAA assets located at Kurta\nTskhinvali Sector - Grid MM18",
+		TargetBriefing = "Destroy AAA assets located at Kurta\nTskhinvali Sector - Grid MM18",
 	}
 	OperationClearField_AG[70] = {
 		TargetName = "Tskhinvali - AAA 2",
 		TargetStatic = false,
-		TargetBriefing = "Primary Objective - Destroy AAA assets South of Tskhinvali\nTskhinvali Sector - Grid MM17",
+		TargetBriefing = "Destroy AAA assets South of Tskhinvali\nTskhinvali Sector - Grid MM17",
 	}
 	OperationClearField_AG[71] = {
 		TargetName = "Tskhinvali - Armor 1",
 		TargetStatic = false,
-		TargetBriefing = "Primary Objective - Destroy the APC's located at Kurta\nTskhinvali Sector - Grid MM18",
+		TargetBriefing = "Destroy the APC's located at Kurta\nTskhinvali Sector - Grid MM18",
 	}
 	OperationClearField_AG[72] = {
 		TargetName = "Tskhinvali - Armor 2",
 		TargetStatic = false,
-		TargetBriefing = "Primary Objective - Destroy the APC's South of Tskhinvali\nTskhinvali Sector - Grid MM17",
+		TargetBriefing = "Destroy the APC's South of Tskhinvali\nTskhinvali Sector - Grid MM17",
 	}
 	OperationClearField_AG[73] = {
 		TargetName = "Tskhinvali - Armor 3",
 		TargetStatic = false,
-		TargetBriefing = "Primary Objective - Destroy the APC's located at Ergneti\nTskhinvali Sector - Grid MM17",
+		TargetBriefing = "Destroy the APC's located at Ergneti\nTskhinvali Sector - Grid MM17",
 	}	
 	OperationClearField_AG[74] = {
 		TargetName = "Tskhinvali - Command 1",
 		TargetStatic = false,
-		TargetBriefing = "Primary Objective - Destroy the Mobile Command Vehicle located South of Tskhinvali\nTskhinvali Sector - Grid MM17",
+		TargetBriefing = "Destroy the Mobile Command Vehicle located South of Tskhinvali\nTskhinvali Sector - Grid MM17",
 	}	
 	OperationClearField_AG[75] = {
 		TargetName = "Tskhinvali - Infantry 1",
 		TargetStatic = false,
-		TargetBriefing = "Primary Objective - Destroy the Infantry at the Road Outpost at Ergneti\nTskhinvali Sector - Grid MM17",
+		TargetBriefing = "Destroy the Infantry at the Road Outpost at Ergneti\nTskhinvali Sector - Grid MM17",
 	}
 	OperationClearField_AG[76] = {
 		TargetName = "Tskhinvali - Military Barracks",
 		TargetStatic = true,
-		TargetBriefing = "Primary Objective - Destroy the Military Barracks at Kurta\nTskhinvali Sector - Grid MM18",
+		TargetBriefing = "Destroy the Military Barracks at Kurta\nTskhinvali Sector - Grid MM18",
 	}
 	OperationClearField_AG[77] = {
 		TargetName = "Tskhinvali - Outpost",
 		TargetStatic = true,
-		TargetBriefing = "Primary Objective - Destroy the Road Outpost at Ergneti\nTskhinvali Sector - Grid MM17",
+		TargetBriefing = "Destroy the Road Outpost at Ergneti\nTskhinvali Sector - Grid MM17",
 	}
 	OperationClearField_AG[78] = {
 		TargetName = "Tskhinvali - SAM 1",
 		TargetStatic = false,
-		TargetBriefing = "Primary Objective - Destroy the Mobile SAM located South of Tskhinvali\nTskhinvali Sector - Grid MM17",
+		TargetBriefing = "Destroy the Mobile SAM located South of Tskhinvali\nTskhinvali Sector - Grid MM17",
 	}
 	OperationClearField_AG[79] = {
 		TargetName = "Tskhinvali - SAM 2",
 		TargetStatic = false,
-		TargetBriefing = "Primary Objective - Destroy the Mobile SAM located at Tskhinvali\nTskhinvali Sector - Grid MM17",
+		TargetBriefing = "Destroy the Mobile SAM located at Tskhinvali\nTskhinvali Sector - Grid MM17",
 	}
 	OperationClearField_AG[80] = {
 		TargetName = "Tskhinvali - Barracks",
 		TargetStatic = true,
-		TargetBriefing = "Primary Objective - Destroy the Military Barracks located at Tskhinvali\nTskhinvali Sector - Grid MM17",
+		TargetBriefing = "Destroy the Military Barracks located at Tskhinvali\nTskhinvali Sector - Grid MM17",
 	}
 	OperationClearField_AG[81] = {
 		TargetName = "Tskhinvali - Military HQ",
 		TargetStatic = true,
-		TargetBriefing = "Primary Objective - Destroy the Military HQ located at Tskhinvali\nTskhinvali Sector - Grid MM17",
+		TargetBriefing = "Destroy the Military HQ located at Tskhinvali\nTskhinvali Sector - Grid MM17",
 	}
 	OperationClearField_AG[82] = {
 		TargetName = "Tskhinvali - Supply 1",
 		TargetStatic = false,
-		TargetBriefing = "Primary Objective - Destroy the Supply Trucks located at Tskhinvali\nTskhinvali Sector - Grid MM17",
+		TargetBriefing = "Destroy the Supply Trucks located at Tskhinvali\nTskhinvali Sector - Grid MM17",
 	}
 	--Zemo-Azhara
 	OperationClearField_AG[83] = {
 		TargetName = "Zemo Azhara - AAA 1",
 		TargetStatic = false,
-		TargetBriefing = "Primary Objective - Destroy AAA assets located East of Zemo-Azhara\nZemo-Azhara Sector - Grid GH27",
+		TargetBriefing = "Destroy AAA assets located East of Zemo-Azhara\nZemo-Azhara Sector - Grid GH27",
 	}
 	OperationClearField_AG[84] = {
 		TargetName = "Zemo Azhara - AAA 2",
 		TargetStatic = false,
-		TargetBriefing = "Primary Objective - Destroy AAA assets located East of Zemo-Azhara\nZemo-Azhara Sector - Grid GH37",
+		TargetBriefing = "Destroy AAA assets located East of Zemo-Azhara\nZemo-Azhara Sector - Grid GH37",
 	}
 	OperationClearField_AG[85] = {
 		TargetName = "Zemo Azhara - Armor 1",
 		TargetStatic = false,
-		TargetBriefing = "Primary Objective - Destroy the T-90 Tanks located East of Zemo-Azhara\nZemo-Azhara Sector - Grid GH27",
+		TargetBriefing = "Destroy the T-90 Tanks located East of Zemo-Azhara\nZemo-Azhara Sector - Grid GH27",
 	}
 	OperationClearField_AG[86] = {
 		TargetName = "Zemo Azhara - Armor 2",
 		TargetStatic = false,
-		TargetBriefing = "Primary Objective - Destroy APC's and IFV's located East of Zemo-Azhara\nZemo-Azhara Sector - Grid GH37",
+		TargetBriefing = "Destroy APC's and IFV's located East of Zemo-Azhara\nZemo-Azhara Sector - Grid GH37",
 	}
 	OperationClearField_AG[87] = {
 		TargetName = "Zemo Azhara - Armor 3",
 		TargetStatic = false,
-		TargetBriefing = "Primary Objective - Destroy the T-90 Tanks located East of Zemo-Azhara\nZemo-Azhara Sector - Grid GH37",
+		TargetBriefing = "Destroy the T-90 Tanks located East of Zemo-Azhara\nZemo-Azhara Sector - Grid GH37",
 	}
 	OperationClearField_AG[88] = {
 		TargetName = "Zemo Azhara - Artillery 1",
 		TargetStatic = false,
-		TargetBriefing = "Primary Objective - Destroy the Artillery located East of Zemo-Azhara\nZemo-Azhara Sector - Grid GH27",
+		TargetBriefing = "Destroy the Artillery located East of Zemo-Azhara\nZemo-Azhara Sector - Grid GH27",
 	}
 	OperationClearField_AG[89] = {
 		TargetName = "Zemo Azhara - Artillery 2",
 		TargetStatic = false,
-		TargetBriefing = "Primary Objective - Destroy the Artillery located East of Zemo-Azhara\nZemo-Azhara Sector - Grid GH37",
+		TargetBriefing = "Destroy the Artillery located East of Zemo-Azhara\nZemo-Azhara Sector - Grid GH37",
 	}
 	OperationClearField_AG[90] = {
 		TargetName = "Zemo Azhara - SAM 1",
 		TargetStatic = false,
-		TargetBriefing = "Primary Objective - Destroy the Mobile SAM located East of Zemo-Azhara\nZemo-Azhara Sector - Grid GH27",
+		TargetBriefing = "Destroy the Mobile SAM located East of Zemo-Azhara\nZemo-Azhara Sector - Grid GH27",
 	}
 	OperationClearField_AG[91] = {
 		TargetName = "Zemo Azhara - Supply 1",
 		TargetStatic = false,
-		TargetBriefing = "Primary Objective - Destroy the Supply Trucks located East of Zemo-Azhara\nZemo-Azhara Sector - Grid GH27",
+		TargetBriefing = "Destroy the Supply Trucks located East of Zemo-Azhara\nZemo-Azhara Sector - Grid GH27",
 	}	
 	--ZUGDIDI
 	OperationClearField_AG[92] = {
 		TargetName = "Zugdidi - AAA 1",
 		TargetStatic = false,
-		TargetBriefing = "Primary Objective - Destroy AAA assets located at Zeni\nZugdidi Sector - Grid GH20-GH21",	
+		TargetBriefing = "Destroy AAA assets located at Zeni\nZugdidi Sector - Grid GH20-GH21",	
 	}
 	OperationClearField_AG[93] = {
 		TargetName = "Zugdidi - AAA 2",
 		TargetStatic = false,
-		TargetBriefing = "Primary Objective - Destroy AAA assets located East of Chuburhindzhi\nZugdidi Sector - Grid GH31",
+		TargetBriefing = "Destroy AAA assets located East of Chuburhindzhi\nZugdidi Sector - Grid GH31",
 	}
 	OperationClearField_AG[94] = {
 		TargetName = "Zugdidi - Armor 1",
 		TargetStatic = false,
-		TargetBriefing = "Primary Objective - Destroy the T-80 Tanks located at Zeni\nZugdidi Sector - Grid GH20-GH21",
+		TargetBriefing = "Destroy the T-80 Tanks located at Zeni\nZugdidi Sector - Grid GH20-GH21",
 	}
 	OperationClearField_AG[95] = {
 		TargetName = "Zugdidi - Armor 2",
 		TargetStatic = false,
-		TargetBriefing = "Primary Objective - Destroy the T-90 Tanks located East of Chuburhindzhi\nZugdidi Sector - Grid GH31",
+		TargetBriefing = "Destroy the T-90 Tanks located East of Chuburhindzhi\nZugdidi Sector - Grid GH31",
 	}
 	OperationClearField_AG[96] = {
 		TargetName = "Zugdidi - Armor 3",
 		TargetStatic = false,
-		TargetBriefing = "Primary Objective - Destroy the IFV's located North of Pahulani\nZugdidi Sector - Grid GH42",
+		TargetBriefing = "Destroy the IFV's located North of Pahulani\nZugdidi Sector - Grid GH42",
 	}	
 	OperationClearField_AG[97] = {
 		TargetName = "Zugdidi - Artillery 1",
 		TargetStatic = false,
-		TargetBriefing = "Primary Objective - Destroy the Artillery located at Zeni\nZugdidi Sector - Grid GH20-GH21",
+		TargetBriefing = "Destroy the Artillery located at Zeni\nZugdidi Sector - Grid GH20-GH21",
 	}
 	OperationClearField_AG[98] = {
 		TargetName = "Zugdidi - Artillery 2",
 		TargetStatic = false,
-		TargetBriefing = "Primary Objective - Destroy the Artillery located East of Chuburhindzhi\nZugdidi Sector - Grid GH31",
+		TargetBriefing = "Destroy the Artillery located East of Chuburhindzhi\nZugdidi Sector - Grid GH31",
 	}
 	OperationClearField_AG[99] = {
 		TargetName = "Zugdidi - SAM 1",
 		TargetStatic = false,
-		TargetBriefing = "Primary Objective - Destroy the Mobile SAM located East of Chuburhindzhi\nZugdidi Sector - Grid GH31",
+		TargetBriefing = "Destroy the Mobile SAM located East of Chuburhindzhi\nZugdidi Sector - Grid GH31",
 	}
 	OperationClearField_AG[100] = {
 		TargetName = "Zugdidi - SAM 2",
 		TargetStatic = false,
-		TargetBriefing = "Primary Objective - Destroy the Mobile SAM located North of Pahulani\nZugdidi Sector - Grid GH42",
+		TargetBriefing = "Destroy the Mobile SAM located North of Pahulani\nZugdidi Sector - Grid GH42",
 	}
 	--////Expanded List 1
 	OperationClearField_AG[101] = {
 		TargetName = "Sochi - EWR Veseloe",
 		TargetStatic = false,
-		TargetBriefing = "Primary Objective - Destroy the Early Warning Radar located at Veseloe\nSochi Sector - Grid EJ80",
+		TargetBriefing = "Destroy the Early Warning Radar located at Veseloe\nSochi Sector - Grid EJ80",
 	}
 	OperationClearField_AG[102] = {
 		TargetName = "Gudauta - EWR Gudauta 1",
 		TargetStatic = false,
-		TargetBriefing = "Primary Objective - Destroy the Early Warning Radar located at Algyt\nGudauta Sector - Grid FH27",
+		TargetBriefing = "Destroy the Early Warning Radar located at Algyt\nGudauta Sector - Grid FH27",
 	}
 	OperationClearField_AG[103] = {
 		TargetName = "Gudauta - EWR Gudauta 2",
 		TargetStatic = false,
-		TargetBriefing = "Primary Objective - Destroy the Early Warning Radar located at Adzhapsha\nGudauta Sector - Grid FH47",
+		TargetBriefing = "Destroy the Early Warning Radar located at Adzhapsha\nGudauta Sector - Grid FH47",
 	}
 	OperationClearField_AG[104] = {
 		TargetName = "Sukhumi - EWR Kvemo-Merheuli",
 		TargetStatic = false,
-		TargetBriefing = "Primary Objective - Destroy the Early Warning Radar at Kvemo-Merheuli\nSukhumi Sector - Grid FH65",
+		TargetBriefing = "Destroy the Early Warning Radar at Kvemo-Merheuli\nSukhumi Sector - Grid FH65",
 	}
 	OperationClearField_AG[105] = {
 		TargetName = "Sukhumi - EWR Sukhumi",
 		TargetStatic = false,
-		TargetBriefing = "Primary Objective - Destroy the Early Warning Radar at the Sukhumi Airbase\nSukhumi Sector - Grid FH74",
+		TargetBriefing = "Destroy the Early Warning Radar at the Sukhumi Airbase\nSukhumi Sector - Grid FH74",
 	}
 	--////Expanded List 2
 	OperationClearField_AG[106] = {
 		TargetName = "Ochamchira - Naval Repair",
 		TargetStatic = true,
-		TargetBriefing = "Primary Objective - Destroy the Repair Yard at the Ochamchira Naval Base located West of Dzhukmur\nOchamchira Sector - Grid FH93",
+		TargetBriefing = "Destroy the Repair Yard at the Ochamchira Naval Base located West of Dzhukmur\nOchamchira Sector - Grid FH93",
 	}
 	OperationClearField_AG[107] = {
 		TargetName = "Ochamchira - AAA 3",
 		TargetStatic = false,
-		TargetBriefing = "Primary Objective - Destroy the AAA Assets at the Ochamchira Naval Base located West of Dzhukmur\nOchamchira Sector - Grid FH93",
+		TargetBriefing = "Destroy the AAA Assets at the Ochamchira Naval Base located West of Dzhukmur\nOchamchira Sector - Grid FH93",
 	}
 	OperationClearField_AG[108] = {
 		TargetName = "Sukhumi - Military Warehouse",
 		TargetStatic = true,
-		TargetBriefing = "Primary Objective - Destroy the Warehouse located at Sukhumi\nSukhumi Sector - Grid FH66",
+		TargetBriefing = "Destroy the Warehouse located at Sukhumi\nSukhumi Sector - Grid FH66",
 	}
 	OperationClearField_AG[109] = {
 		TargetName = "Sukhumi - Military HQ",
 		TargetStatic = true,
-		TargetBriefing = "Primary Objective - Destroy the Military HQ located at Sukhumi\nSukhumi Sector - Grid FH66",
+		TargetBriefing = "Destroy the Military HQ located at Sukhumi\nSukhumi Sector - Grid FH66",
 	}
 	OperationClearField_AG[110] = {
 		TargetName = "Gudauta - Lidzava Military Barracks",
 		TargetStatic = true,
-		TargetBriefing = "Primary Objective - Destroy the Military Barracks located at Lidzava\nGudauta Sector - Grid FH18",
+		TargetBriefing = "Destroy the Military Barracks located at Lidzava\nGudauta Sector - Grid FH18",
 	}
 	OperationClearField_AG[111] = {
 		TargetName = "Gudauta - Achandara Military Barracks",
 		TargetStatic = true,
-		TargetBriefing = "Primary Objective - Destroy the Achandara Military Barracks located South of Aosyrhva\nGudauta Sector - Grid FH38",
+		TargetBriefing = "Destroy the Achandara Military Barracks located South of Aosyrhva\nGudauta Sector - Grid FH38",
 	}
 	OperationClearField_AG[112] = {
 		TargetName = "Gudauta - Infantry 1",
 		TargetStatic = false,
-		TargetBriefing = "Primary Objective - Destroy the Infantry at the Achandara Military Barracks located South of Aosyrhva\nGudauta Sector - Grid FH38",
+		TargetBriefing = "Destroy the Infantry at the Achandara Military Barracks located South of Aosyrhva\nGudauta Sector - Grid FH38",
 	}
 	OperationClearField_AG[113] = {
 		TargetName = "Sukhumi - Boat Bunker",
 		TargetStatic = true,
-		TargetBriefing = "Primary Objective - Destroy the Boat Bunker located at Sukhumi\nSukhumi Sector - Grid FH66",
+		TargetBriefing = "Destroy the Boat Bunker located at Sukhumi\nSukhumi Sector - Grid FH66",
 	}
 	OperationClearField_AG[114] = {
 		TargetName = "Sukhumi - Navy 2",
 		TargetStatic = false,
-		TargetBriefing = "Primary Objective - Destroy the Armed Speedboats located at Sukhumi\nSukhumi Sector - Grid FH66",
+		TargetBriefing = "Destroy the Armed Speedboats located at Sukhumi\nSukhumi Sector - Grid FH66",
 	}
 	OperationClearField_AG[115] = {
 		TargetName = "Ochamchira - Navy 2",
 		TargetStatic = false,
-		TargetBriefing = "Primary Objective - Destroy the Armed Speedboats at the Ochamchira Naval Base located West of Dzhukmur\nOchamchira Sector - Grid FH93",
+		TargetBriefing = "Destroy the Armed Speedboats at the Ochamchira Naval Base located West of Dzhukmur\nOchamchira Sector - Grid FH93",
 	}
 	OperationClearField_AG[116] = {
 		TargetName = "Gudauta - Armor 1",
 		TargetStatic = false,
-		TargetBriefing = "Primary Objective - Destroy the T-72 Tanks located at the Lidzava Military Barracks\nGudauta Sector - Grid FH18",
+		TargetBriefing = "Destroy the T-72 Tanks located at the Lidzava Military Barracks\nGudauta Sector - Grid FH18",
 	}
 	OperationClearField_AG[117] = {
 		TargetName = "Kvemo Roka - Convoy 2",
 		TargetStatic = false,
-		TargetBriefing = "Primary Objective - Destroy the Convoy located at Kvemo-Khoshka\nKvemo-Roka Sector - Grid MN20",
+		TargetBriefing = "Destroy the Convoy located at Kvemo-Khoshka\nKvemo-Roka Sector - Grid MN20",
 	}
 	OperationClearField_AG[118] = {
 		TargetName = "Tkvarcheli - Transport",
 		TargetStatic = true,
-		TargetBriefing = "Primary Objective - Destroy the Mi-8MTV2 Helicopter located at Agvavera\nTkvarcheli Sector - Grid GH23",
+		TargetBriefing = "Destroy the Mi-8MTV2 Helicopter located at Agvavera\nTkvarcheli Sector - Grid GH23",
 	}
 	OperationClearField_AG[119] = {
 		TargetName = "Zemo Azhara - Supply 2",
 		TargetStatic = false,
-		TargetBriefing = "Primary Objective - Destroy the Supply Trucks located East of Zemo-Azhara\nZemo-Azhara Sector - Grid GH37",
+		TargetBriefing = "Destroy the Supply Trucks located East of Zemo-Azhara\nZemo-Azhara Sector - Grid GH37",
 	}
 	OperationClearField_AG[120] = {
 		TargetName = "Zugdidi - Saberio Border Post",
 		TargetStatic = true,
-		TargetBriefing = "Primary Objective - Destroy the Road Outpost located South of Saberio\nZugdidi Sector - Grid GH32",
+		TargetBriefing = "Destroy the Road Outpost located South of Saberio\nZugdidi Sector - Grid GH32",
 	}
 	OperationClearField_AG[121] = {
 		TargetName = "Zugdidi - Infantry 1",
 		TargetStatic = false,
-		TargetBriefing = "Primary Objective - Destroy the Infantry at the Road Outpost located South of Saberio\nZugdidi Sector - Grid GH32",
+		TargetBriefing = "Destroy the Infantry at the Road Outpost located South of Saberio\nZugdidi Sector - Grid GH32",
 	}
 	OperationClearField_AG[122] = {
 		TargetName = "Zugdidi - Gali Military Barracks",
 		TargetStatic = true,
-		TargetBriefing = "Primary Objective - Destroy the Military Barracks located at Gali\nZugdidi Sector - Grid GH22",
+		TargetBriefing = "Destroy the Military Barracks located at Gali\nZugdidi Sector - Grid GH22",
 	}
 	OperationClearField_AG[123] = {
 		TargetName = "Zugdidi - Infantry 2",
 		TargetStatic = false,
-		TargetBriefing = "Primary Objective - Destroy the Infantry at the Military Barracks located at Gali\nZugdidi Sector - Grid GH22",
+		TargetBriefing = "Destroy the Infantry at the Military Barracks located at Gali\nZugdidi Sector - Grid GH22",
 	}
 	OperationClearField_AG[124] = {
 		TargetName = "Zugdidi - Supply 1",
 		TargetStatic = false,
-		TargetBriefing = "Primary Objective - Destroy the Supply Trucks at the Military Barracks located at Gali\nZugdidi Sector - Grid GH22",
+		TargetBriefing = "Destroy the Supply Trucks at the Military Barracks located at Gali\nZugdidi Sector - Grid GH22",
 	}
 	OperationClearField_AG[125] = {
 		TargetName = "Zugdidi - Armor 4",
 		TargetStatic = false,
-		TargetBriefing = "Primary Objective - Destroy the IFV's at the Military Barracks located at Gali\nZugdidi Sector - Grid GH22",
+		TargetBriefing = "Destroy the IFV's at the Military Barracks located at Gali\nZugdidi Sector - Grid GH22",
 	}	
 	
 	--Debug Code
@@ -1083,123 +1087,88 @@ local function CheckObjectiveRequest()
 	end	
 end
 
-function Target1Report()
-			
-	if (AGTargetTypeStatic == false and AGMissionTarget ~=nil) then
-		TargetGroup = GROUP:FindByName(AGMissionTarget)	
-		
-		if (GROUP:FindByName(AGMissionTarget):IsAlive() == true) then
-		
-			TargetRemainingUnits = Group.getByName(AGMissionTarget):getSize()	
-			
-			MissionPlayersBlue = SET_CLIENT:New():FilterCoalitions("blue"):FilterActive():FilterOnce()
-			
-			MissionPlayersBlue:ForEachClient(
-				function(Client)
-					if Client:IsAlive() == true then
-						ClientPlayerName = Client:GetPlayerName()	  
-						ClientUnitName = Client:GetName()			  
-						ClientGroupName = Client:GetClientGroupName() 			
-						ClientGroupID = Client:GetClientGroupID()	   	
-						ClientPlane = Client:GetDCSObject():getTypeName(self)
-				
-						PlayerUnit = UNIT:FindByName(ClientUnitName)		
-					
-						PlayerCoord = PlayerUnit:GetCoordinate()
-						TargetCoord = TargetGroup:GetCoordinate()
-						TargetHeight = math.floor(TargetGroup:GetCoordinate():GetLandHeight() * 100)/100
-						TargetHeightFt = math.floor(TargetHeight * 3.28084)
-						PlayerDistance = PlayerCoord:Get2DDistance(TargetCoord)
 
-						TargetVector = PlayerCoord:GetDirectionVec3(TargetCoord)
-						TargetBearing = PlayerCoord:GetAngleRadians (TargetVector)	
-					
-						PlayerBR = PlayerCoord:GetBRText(TargetBearing, PlayerDistance, SETTINGS:SetImperial())
-					
-						--List the amount of units remaining in the group
-						if (TargetRemainingUnits > 1) then
-							SZMessage = "There are "..TargetRemainingUnits.." targets remaining for this mission" 
-						elseif (TargetRemainingUnits == 1) then
-							SZMessage = "There is "..TargetRemainingUnits.." target remaining for this mission" 
-						elseif (TargetRemainingUnits == nil) then					
-							SZMessage = "Unable To Determine Group Size"
-						else			
-							SZMessage = "Nothing to report"		
-						end		
-					
-						BRMessage = ", bearing "..PlayerBR
-						ELEMessage = "Elevation "..TargetHeight.."m".." / "..TargetHeightFt.."ft"
-					
-						_SETTINGS:SetLL_Accuracy(0)
-						CoordStringLLDMS = TargetCoord:ToStringLLDMS(SETTINGS:SetImperial())
-						_SETTINGS:SetLL_Accuracy(3)
-						CoordStringLLDDM = TargetCoord:ToStringLLDDM(SETTINGS:SetImperial())
-						_SETTINGS:SetLL_Accuracy(2)
-						CoordStringLLDMSDS = TargetCoord:ToStringLLDMSDS(SETTINGS:SetImperial())
+function TargetReport(PlayerGroup, TaskNumber)
 
-					    if (ClientPlane == "F-16C_50") then
-							trigger.action.outTextForGroup(ClientGroupID, "Target Report For "..ClientPlayerName.."\n".."\n"..AGMissionBriefingText..BRMessage.."\n"..SZMessage.."\n".."\n"..CoordStringLLDDM.."\n".."\n"..ELEMessage, 30)							
-						elseif (ClientPlane == "FA-18C_hornet") then
-							trigger.action.outTextForGroup(ClientGroupID, "Target Report For "..ClientPlayerName.."\n".."\n"..AGMissionBriefingText..BRMessage.."\n"..SZMessage.."\n".."\n"..CoordStringLLDMSDS.."\n".."\n"..ELEMessage, 30)							
-						else
-							trigger.action.outTextForGroup(ClientGroupID, "Target Report For "..ClientPlayerName.."\n".."\n"..AGMissionBriefingText..BRMessage.."\n"..SZMessage.."\n"..CoordStringLLDMS.."\n"..CoordStringLLDDM.."\n"..CoordStringLLDMSDS.."\n"..ELEMessage.."\n"..ClientPlane, 30)							
-						end
-					else						
-					end				
-				end
-			)
+	local TargetStatic = false
+	local TargetName = ""
+
+	if TaskNumber == 1 then
+		TargetStatic = AGTargetTypeStatic
+		TargetName = AGMissionTarget
+		Briefing = AGMissionBriefingText
+	elseif TaskNumber == 2 then
+		TargetStatic = AGTarget2TypeStatic
+		TargetName = AGMission2Target
+		Briefing = AGMission2BriefingText
+	else
+		TargetStatic = AGTarget3TypeStatic
+		TargetName = AGMission3Target
+		Briefing = AGMission3BriefingText
+	end
+			
+
+	if (TargetName ~=nil) then
+		if  (TargetStatic == false) then
+			TargetGroup = GROUP:FindByName(TargetName)	
+			TargetRemainingUnits = Group.getByName(TargetName):getSize()	
 		else
-			trigger.action.outText("Target Report Unavailable", 15)
+			TargetGroup = STATIC:FindByName(TargetName, false)
+			TargetRemainingUnits = 1
 		end
 		
-	elseif (AGTargetTypeStatic == true and AGMissionTarget ~=nil) then
-		TargetGroup = STATIC:FindByName(AGMissionTarget, false)
+			
+		ClientGroupName = PlayerGroup 			
+		ClientGroupID = ClientGroupName:getID()	   
+		PlayerDCSUnit = PlayerGroup:getUnit(1)
+		PlayerUnit = UNIT:FindByName(PlayerGroup:getUnit(1):getName())
+		PlaneType = PlayerDCSUnit:getTypeName()
+
+		ASSIGNED_PILOTS[TaskNumber][PlayerUnit] = PlayerUnit
 		
-		MissionPlayersBlue = SET_CLIENT:New():FilterCoalitions("blue"):FilterActive():FilterOnce()
+			
+		PlayerCoord = PlayerUnit:GetCoordinate()
+		TargetCoord = TargetGroup:GetCoordinate()
+		TargetHeight = math.floor(TargetGroup:GetCoordinate():GetLandHeight() * 100)/100
+		TargetHeightFt = math.floor(TargetHeight * 3.28084)
+		PlayerDistance = PlayerCoord:Get2DDistance(TargetCoord)
 
-		MissionPlayersBlue:ForEachClient(
-			function(Client)
-				if Client:IsAlive() == true then
-					ClientPlayerName = Client:GetPlayerName()	
-					ClientUnitName = Client:GetName()			
-					ClientGroupName = Client:GetClientGroupName()				
-					ClientGroupID = Client:GetClientGroupID()
-					ClientPlane = Client:GetDCSObject():getTypeName(self)
-				
-					PlayerUnit = UNIT:FindByName(ClientUnitName)		
-					
-					PlayerCoord = PlayerUnit:GetCoordinate()
-					TargetCoord = TargetGroup:GetCoordinate()
-					TargetHeight = math.floor(TargetGroup:GetCoordinate():GetLandHeight() * 100)/100
-					TargetHeightFt = math.floor(TargetHeight * 3.28084)
-					PlayerDistance = PlayerCoord:Get2DDistance(TargetCoord)
-					
-					TargetVector = PlayerCoord:GetDirectionVec3(TargetCoord)
-					TargetBearing = PlayerCoord:GetAngleRadians (TargetVector)	
-										
-					PlayerBR = PlayerCoord:GetBRText(TargetBearing, PlayerDistance, SETTINGS:SetImperial())
+		TargetVector = PlayerCoord:GetDirectionVec3(TargetCoord)
+		TargetBearing = PlayerCoord:GetAngleRadians(TargetVector)	
 
-					BRMessage = "Target bearing "..PlayerBR
-					ELEMessage = "Elevation "..TargetHeight.."m".." / "..TargetHeightFt.."ft"
+		PlayerBR = PlayerCoord:GetBRText(TargetBearing, PlayerDistance, SETTINGS:SetImperial())
 					
-					_SETTINGS:SetLL_Accuracy(0)
-					CoordStringLLDMS = TargetCoord:ToStringLLDMS(SETTINGS:SetImperial())
-					_SETTINGS:SetLL_Accuracy(3)
-					CoordStringLLDDM = TargetCoord:ToStringLLDDM(SETTINGS:SetImperial())
-					_SETTINGS:SetLL_Accuracy(2)
-					CoordStringLLDMSDS = TargetCoord:ToStringLLDMSDS(SETTINGS:SetImperial())
+		--List the amount of units remaining in the group
+		if (TargetRemainingUnits > 1) then
+			SZMessage = "There are "..TargetRemainingUnits.." targets remaining" 
+		elseif (TargetRemainingUnits == 1) then
+			SZMessage = "There is "..TargetRemainingUnits.." target remaining" 
+		elseif (TargetRemainingUnits == nil) then					
+			SZMessage = "Unable To Determine Group Size"
+		else			
+			SZMessage = "Nothing to report"		
+		end		
+			
+		BRMessage = ", bearing "..PlayerBR
+		ELEMessage = "Elevation "..TargetHeight.."m".." / "..TargetHeightFt.."ft"
 					
-					if (ClientPlane == "F-16C_50") then
-						trigger.action.outTextForGroup(ClientGroupID, "Target Report For "..ClientPlayerName.."\n".."\n"..AGMissionBriefingText..BRMessage.."\n"..SZMessage.."\n".."\n"..CoordStringLLDDM.."\n".."\n"..ELEMessage, 30)							
-					elseif (ClientPlane == "FA-18C_hornet") then
-						trigger.action.outTextForGroup(ClientGroupID, "Target Report For "..ClientPlayerName.."\n".."\n"..AGMissionBriefingText..BRMessage.."\n"..SZMessage.."\n".."\n"..CoordStringLLDMSDS.."\n".."\n"..ELEMessage, 30)							
-					else
-						trigger.action.outTextForGroup(ClientGroupID, "Target Report For "..ClientPlayerName.."\n".."\n"..AGMissionBriefingText..BRMessage.."\n"..SZMessage.."\n"..CoordStringLLDMS.."\n"..CoordStringLLDDM.."\n"..CoordStringLLDMSDS.."\n"..ELEMessage.."\n"..ClientPlane, 30)							
-					end
-				else
-				end				
-			end
-		)		
+		_SETTINGS:SetLL_Accuracy(0)
+		CoordStringLLDMS = TargetCoord:ToStringLLDMS(SETTINGS:SetImperial())
+		_SETTINGS:SetLL_Accuracy(3)
+		CoordStringLLDDM = TargetCoord:ToStringLLDDM(SETTINGS:SetImperial())
+		_SETTINGS:SetLL_Accuracy(2)
+		CoordStringLLDMSDS = TargetCoord:ToStringLLDMSDS(SETTINGS:SetImperial())
+
+		if (PlaneType == "F-16C_50") then
+			trigger.action.outTextForGroup(ClientGroupID, Briefing..BRMessage.."\n"..SZMessage.."\n".."\n"..CoordStringLLDDM.."\n".."\n"..ELEMessage, 40)									
+		elseif (PlaneType == "F/A-18C_hornet") then
+			trigger.action.outTextForGroup(ClientGroupID, Briefing.."\n"..SZMessage.."\n".."\n"..CoordStringLLDDM.."\n".."\n"..ELEMessage, 40)									
+		else
+			trigger.action.outTextForGroup(ClientGroupID, Briefing.."\n"..SZMessage.."\n".."\n"..CoordStringLLDMS.."\n"..CoordStringLLDDM.."\n"..CoordStringLLDMSDS.."\n"..ELEMessage, 40)									
+		end		
+		
+		
+		
 	elseif ( OperationComplete == true ) then
 		trigger.action.outText("The Operation Has Been Completed, There Are No Further Targets", 15)	
 	else
@@ -1207,255 +1176,6 @@ function Target1Report()
 	end
 end
 
-
-function Target2Report()
-			
-	if (AGTarget2TypeStatic == false and AGMission2Target ~=nil) then
-		TargetGroup = GROUP:FindByName(AGMission2Target)	
-		
-		if (GROUP:FindByName(AGMission2Target):IsAlive() == true) then
-		
-			TargetRemainingUnits = Group.getByName(AGMission2Target):getSize()	
-			
-			MissionPlayersBlue = SET_CLIENT:New():FilterCoalitions("blue"):FilterActive():FilterOnce()
-			
-			MissionPlayersBlue:ForEachClient(
-				function(Client)
-					if Client:IsAlive() == true then
-						ClientPlayerName = Client:GetPlayerName()	  
-						ClientUnitName = Client:GetName()			  
-						ClientGroupName = Client:GetClientGroupName() 			
-						ClientGroupID = Client:GetClientGroupID()	   	
-						ClientPlane = Client:GetDCSObject():getTypeName(self)
-				
-						PlayerUnit = UNIT:FindByName(ClientUnitName)		
-					
-						PlayerCoord = PlayerUnit:GetCoordinate()
-						TargetCoord = TargetGroup:GetCoordinate()
-						TargetHeight = math.floor(TargetGroup:GetCoordinate():GetLandHeight() * 100)/100
-						TargetHeightFt = math.floor(TargetHeight * 3.28084)
-						PlayerDistance = PlayerCoord:Get2DDistance(TargetCoord)
-
-						TargetVector = PlayerCoord:GetDirectionVec3(TargetCoord)
-						TargetBearing = PlayerCoord:GetAngleRadians (TargetVector)	
-					
-						PlayerBR = PlayerCoord:GetBRText(TargetBearing, PlayerDistance, SETTINGS:SetImperial())
-					
-						--List the amount of units remaining in the group
-						if (TargetRemainingUnits > 1) then
-							SZMessage = "There are "..TargetRemainingUnits.." targets remaining for this mission" 
-						elseif (TargetRemainingUnits == 1) then
-							SZMessage = "There is "..TargetRemainingUnits.." target remaining for this mission" 
-						elseif (TargetRemainingUnits == nil) then					
-							SZMessage = "Unable To Determine Group Size"
-						else			
-							SZMessage = "Nothing to report"		
-						end		
-					
-						BRMessage = ", bearing "..PlayerBR
-						ELEMessage = "Elevation "..TargetHeight.."m".." / "..TargetHeightFt.."ft"
-					
-						_SETTINGS:SetLL_Accuracy(0)
-						CoordStringLLDMS = TargetCoord:ToStringLLDMS(SETTINGS:SetImperial())
-						_SETTINGS:SetLL_Accuracy(3)
-						CoordStringLLDDM = TargetCoord:ToStringLLDDM(SETTINGS:SetImperial())
-						_SETTINGS:SetLL_Accuracy(2)
-						CoordStringLLDMSDS = TargetCoord:ToStringLLDMSDS(SETTINGS:SetImperial())
-
-					    if (ClientPlane == "F-16C_50") then
-							trigger.action.outTextForGroup(ClientGroupID, "Target Report For "..ClientPlayerName.."\n".."\n"..AGMission2BriefingText..BRMessage.."\n"..SZMessage.."\n".."\n"..CoordStringLLDDM.."\n".."\n"..ELEMessage, 30)							
-						elseif (ClientPlane == "FA-18C_hornet") then
-							trigger.action.outTextForGroup(ClientGroupID, "Target Report For "..ClientPlayerName.."\n".."\n"..AGMission2BriefingText..BRMessage.."\n"..SZMessage.."\n".."\n"..CoordStringLLDMSDS.."\n".."\n"..ELEMessage, 30)							
-						else
-							trigger.action.outTextForGroup(ClientGroupID, "Target Report For "..ClientPlayerName.."\n".."\n"..AGMission2BriefingText..BRMessage.."\n"..SZMessage.."\n"..CoordStringLLDMS.."\n"..CoordStringLLDDM.."\n"..CoordStringLLDMSDS.."\n"..ELEMessage.."\n"..ClientPlane, 30)							
-						end
-					else						
-					end				
-				end
-			)
-		else
-			trigger.action.outText("Target Report Unavailable", 15)
-		end
-		
-	elseif (AGTarget2TypeStatic == true and AGMission2Target ~=nil) then
-		TargetGroup = STATIC:FindByName(AGMission2Target, false)
-		
-		MissionPlayersBlue = SET_CLIENT:New():FilterCoalitions("blue"):FilterActive():FilterOnce()
-
-		MissionPlayersBlue:ForEachClient(
-			function(Client)
-				if Client:IsAlive() == true then
-					ClientPlayerName = Client:GetPlayerName()	
-					ClientUnitName = Client:GetName()			
-					ClientGroupName = Client:GetClientGroupName()				
-					ClientGroupID = Client:GetClientGroupID()
-					ClientPlane = Client:GetDCSObject():getTypeName(self)
-				
-					PlayerUnit = UNIT:FindByName(ClientUnitName)		
-					
-					PlayerCoord = PlayerUnit:GetCoordinate()
-					TargetCoord = TargetGroup:GetCoordinate()
-					TargetHeight = math.floor(TargetGroup:GetCoordinate():GetLandHeight() * 100)/100
-					TargetHeightFt = math.floor(TargetHeight * 3.28084)
-					PlayerDistance = PlayerCoord:Get2DDistance(TargetCoord)
-					
-					TargetVector = PlayerCoord:GetDirectionVec3(TargetCoord)
-					TargetBearing = PlayerCoord:GetAngleRadians (TargetVector)	
-										
-					PlayerBR = PlayerCoord:GetBRText(TargetBearing, PlayerDistance, SETTINGS:SetImperial())
-
-					BRMessage = "Target bearing "..PlayerBR
-					ELEMessage = "Elevation "..TargetHeight.."m".." / "..TargetHeightFt.."ft"
-					
-					_SETTINGS:SetLL_Accuracy(0)
-					CoordStringLLDMS = TargetCoord:ToStringLLDMS(SETTINGS:SetImperial())
-					_SETTINGS:SetLL_Accuracy(3)
-					CoordStringLLDDM = TargetCoord:ToStringLLDDM(SETTINGS:SetImperial())
-					_SETTINGS:SetLL_Accuracy(2)
-					CoordStringLLDMSDS = TargetCoord:ToStringLLDMSDS(SETTINGS:SetImperial())
-					
-					if (ClientPlane == "F-16C_50") then
-						trigger.action.outTextForGroup(ClientGroupID, "Target Report For "..ClientPlayerName.."\n".."\n"..AGMissionBriefingText..BRMessage.."\n"..SZMessage.."\n".."\n"..CoordStringLLDDM.."\n".."\n"..ELEMessage, 30)							
-					elseif (ClientPlane == "FA-18C_hornet") then
-						trigger.action.outTextForGroup(ClientGroupID, "Target Report For "..ClientPlayerName.."\n".."\n"..AGMissionBriefingText..BRMessage.."\n"..SZMessage.."\n".."\n"..CoordStringLLDMSDS.."\n".."\n"..ELEMessage, 30)							
-					else
-						trigger.action.outTextForGroup(ClientGroupID, "Target Report For "..ClientPlayerName.."\n".."\n"..AGMissionBriefingText..BRMessage.."\n"..SZMessage.."\n"..CoordStringLLDMS.."\n"..CoordStringLLDDM.."\n"..CoordStringLLDMSDS.."\n"..ELEMessage.."\n"..ClientPlane, 30)							
-					end					
-				else
-				end				
-			end
-		)		
-	elseif ( OperationComplete == true ) then
-		trigger.action.outText("The Operation Has Been Completed, There Are No Further Targets", 15)	
-	else
-		trigger.action.outText("No Target Information Available", 15)
-	end
-end
-
-
-function Target3Report()
-			
-	if (AGTarget3TypeStatic == false and AGMission3Target ~=nil) then
-		TargetGroup = GROUP:FindByName(AGMission3Target)	
-		
-		if (GROUP:FindByName(AGMission3Target):IsAlive() == true) then
-		
-			TargetRemainingUnits = Group.getByName(AGMission3Target):getSize()	
-			
-			MissionPlayersBlue = SET_CLIENT:New():FilterCoalitions("blue"):FilterActive():FilterOnce()
-			
-			MissionPlayersBlue:ForEachClient(
-				function(Client)
-					if Client:IsAlive() == true then
-						ClientPlayerName = Client:GetPlayerName()	  
-						ClientUnitName = Client:GetName()			  
-						ClientGroupName = Client:GetClientGroupName() 			
-						ClientGroupID = Client:GetClientGroupID()	   	
-						ClientPlane = Client:GetDCSObject():getTypeName(self)
-				
-						PlayerUnit = UNIT:FindByName(ClientUnitName)		
-					
-						PlayerCoord = PlayerUnit:GetCoordinate()
-						TargetCoord = TargetGroup:GetCoordinate()
-						TargetHeight = math.floor(TargetGroup:GetCoordinate():GetLandHeight() * 100)/100
-						TargetHeightFt = math.floor(TargetHeight * 3.28084)
-						PlayerDistance = PlayerCoord:Get2DDistance(TargetCoord)
-
-						TargetVector = PlayerCoord:GetDirectionVec3(TargetCoord)
-						TargetBearing = PlayerCoord:GetAngleRadians (TargetVector)	
-					
-						PlayerBR = PlayerCoord:GetBRText(TargetBearing, PlayerDistance, SETTINGS:SetImperial())
-					
-						--List the amount of units remaining in the group
-						if (TargetRemainingUnits > 1) then
-							SZMessage = "There are "..TargetRemainingUnits.." targets remaining for this mission" 
-						elseif (TargetRemainingUnits == 1) then
-							SZMessage = "There is "..TargetRemainingUnits.." target remaining for this mission" 
-						elseif (TargetRemainingUnits == nil) then					
-							SZMessage = "Unable To Determine Group Size"
-						else			
-							SZMessage = "Nothing to report"		
-						end		
-					
-						BRMessage = ", bearing "..PlayerBR
-						ELEMessage = "Elevation "..TargetHeight.."m".." / "..TargetHeightFt.."ft"
-					
-						_SETTINGS:SetLL_Accuracy(0)
-						CoordStringLLDMS = TargetCoord:ToStringLLDMS(SETTINGS:SetImperial())
-						_SETTINGS:SetLL_Accuracy(3)
-						CoordStringLLDDM = TargetCoord:ToStringLLDDM(SETTINGS:SetImperial())
-						_SETTINGS:SetLL_Accuracy(2)
-						CoordStringLLDMSDS = TargetCoord:ToStringLLDMSDS(SETTINGS:SetImperial())
-
-					    if (ClientPlane == "F-16C_50") then
-							trigger.action.outTextForGroup(ClientGroupID, "Target Report For "..ClientPlayerName.."\n".."\n"..AGMission3BriefingText..BRMessage.."\n"..SZMessage.."\n".."\n"..CoordStringLLDDM.."\n".."\n"..ELEMessage, 30)							
-						elseif (ClientPlane == "FA-18C_hornet") then
-							trigger.action.outTextForGroup(ClientGroupID, "Target Report For "..ClientPlayerName.."\n".."\n"..AGMission3BriefingText..BRMessage.."\n"..SZMessage.."\n".."\n"..CoordStringLLDMSDS.."\n".."\n"..ELEMessage, 30)							
-						else
-							trigger.action.outTextForGroup(ClientGroupID, "Target Report For "..ClientPlayerName.."\n".."\n"..AGMission3BriefingText..BRMessage.."\n"..SZMessage.."\n"..CoordStringLLDMS.."\n"..CoordStringLLDDM.."\n"..CoordStringLLDMSDS.."\n"..ELEMessage.."\n"..ClientPlane, 30)							
-						end
-					else						
-					end				
-				end
-			)
-		else
-			trigger.action.outText("Target Report Unavailable", 15)
-		end
-		
-	elseif (AGTarget3TypeStatic == true and AGMission3Target ~=nil) then
-		TargetGroup = STATIC:FindByName(AGMission3Target, false)
-		
-		MissionPlayersBlue = SET_CLIENT:New():FilterCoalitions("blue"):FilterActive():FilterOnce()
-
-		MissionPlayersBlue:ForEachClient(
-			function(Client)
-				if Client:IsAlive() == true then
-					ClientPlayerName = Client:GetPlayerName()	
-					ClientUnitName = Client:GetName()			
-					ClientGroupName = Client:GetClientGroupName()				
-					ClientGroupID = Client:GetClientGroupID()
-					ClientPlane = Client:GetDCSObject():getTypeName(self)
-				
-					PlayerUnit = UNIT:FindByName(ClientUnitName)		
-					
-					PlayerCoord = PlayerUnit:GetCoordinate()
-					TargetCoord = TargetGroup:GetCoordinate()
-					TargetHeight = math.floor(TargetGroup:GetCoordinate():GetLandHeight() * 100)/100
-					TargetHeightFt = math.floor(TargetHeight * 3.28084)
-					PlayerDistance = PlayerCoord:Get2DDistance(TargetCoord)
-					
-					TargetVector = PlayerCoord:GetDirectionVec3(TargetCoord)
-					TargetBearing = PlayerCoord:GetAngleRadians (TargetVector)	
-										
-					PlayerBR = PlayerCoord:GetBRText(TargetBearing, PlayerDistance, SETTINGS:SetImperial())
-
-					BRMessage = "Target bearing "..PlayerBR
-					ELEMessage = "Elevation "..TargetHeight.."m".." / "..TargetHeightFt.."ft"
-					
-					_SETTINGS:SetLL_Accuracy(0)
-					CoordStringLLDMS = TargetCoord:ToStringLLDMS(SETTINGS:SetImperial())
-					_SETTINGS:SetLL_Accuracy(3)
-					CoordStringLLDDM = TargetCoord:ToStringLLDDM(SETTINGS:SetImperial())
-					_SETTINGS:SetLL_Accuracy(2)
-					CoordStringLLDMSDS = TargetCoord:ToStringLLDMSDS(SETTINGS:SetImperial())
-					
-					if (ClientPlane == "F-16C_50") then
-						trigger.action.outTextForGroup(ClientGroupID, "Target Report For "..ClientPlayerName.."\n".."\n"..AGMissionBriefingText..BRMessage.."\n"..SZMessage.."\n".."\n"..CoordStringLLDDM.."\n".."\n"..ELEMessage, 30)							
-					elseif (ClientPlane == "FA-18C_hornet") then
-						trigger.action.outTextForGroup(ClientGroupID, "Target Report For "..ClientPlayerName.."\n".."\n"..AGMissionBriefingText..BRMessage.."\n"..SZMessage.."\n".."\n"..CoordStringLLDMSDS.."\n".."\n"..ELEMessage, 30)							
-					else
-						trigger.action.outTextForGroup(ClientGroupID, "Target Report For "..ClientPlayerName.."\n".."\n"..AGMissionBriefingText..BRMessage.."\n"..SZMessage.."\n"..CoordStringLLDMS.."\n"..CoordStringLLDDM.."\n"..CoordStringLLDMSDS.."\n"..ELEMessage.."\n"..ClientPlane, 30)							
-					end
-				else
-				end				
-			end
-		)		
-	elseif ( OperationComplete == true ) then
-		trigger.action.outText("The Operation Has Been Completed, There Are No Further Targets", 15)	
-	else
-		trigger.action.outText("No Target Information Available", 15)
-	end
-end
 
 --////End On Demand Mission Information
 --////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -2006,42 +1726,78 @@ end
 	Zugdidi
 ]]--
 
-function SEF_RadioMenuSetup()
-	--////Set Up Menu
 	-- table missionCommands.addSubMenuForCoalition(enum coalition.side, string name , table path)
 	-- table missionCommands.addCommand(string name, table/nil path, function functionToRun , any anyArguement)
 	-- table missionCommands.addCommandForCoalition(enum coalition.side, string name, table/nil path, function functionToRun , any anyArguement)
 
+
+function addRadioCommands()
+
+	timer.scheduleFunction(addRadioCommands, nil, timer.getTime() + 10)
+
+	local blueGroups = coalition.getGroups(coalition.side.BLUE)
+	local x = 1
+
+	if blueGroups ~= nil then
+        for x, tmpGroup in pairs(blueGroups) do
+            local index = "GROUP_" .. Group.getID(tmpGroup)
+			
+			--trigger.action.outText("adding command for "..index, 5)
+            if GLOBAL_JTAC_RADIO_ADDED[index] == nil then
+                missionCommands.addCommandForGroup(Group.getID(tmpGroup), "Current Objectives", nil, function() CheckObjectiveRequest() end, nil)
+                missionCommands.addCommandForGroup(Group.getID(tmpGroup), "Objective Alpha", nil, function() TargetReport(tmpGroup, 1) end, nil)
+                missionCommands.addCommandForGroup(Group.getID(tmpGroup), "Objective Bravo", nil, function() TargetReport(tmpGroup, 2) end, nil)
+                missionCommands.addCommandForGroup(Group.getID(tmpGroup), "Objective Charlie", nil, function() TargetReport(tmpGroup, 3) end, nil)
+
+				Support = missionCommands.addSubMenuForGroup(Group.getID(tmpGroup), "Mission Support")
+				missionCommands.addCommandForGroup(Group.getID(tmpGroup), "Abort Objective Alpha", Support, function() SEF_SkipMission1() end, nil)
+				missionCommands.addCommandForGroup(Group.getID(tmpGroup), "Abort Objective Bravo", Support, function() SEF_SkipMission2() end, nil)
+				missionCommands.addCommandForGroup(Group.getID(tmpGroup), "Abort Objective Charlie", Support, function() SEF_SkipMission3() end, nil)
+
+				missionCommands.addCommandForGroup(Group.getID(tmpGroup), "Flare Objective Alpha", Support, function() SEF_Target1Smoke() end, nil)
+				missionCommands.addCommandForGroup(Group.getID(tmpGroup), "Flare Objective Bravo", Support, function() SEF_Target2Smoke() end, nil)
+				missionCommands.addCommandForGroup(Group.getID(tmpGroup), "Flare Objective Charlie", Support, function() SEF_Target3Smoke() end, nil)
+                GLOBAL_JTAC_RADIO_ADDED[index] = true
+				--trigger.action.outText("Added command for " .. index, 5)
+            end
+        end
+    end
+
+end
+
+
+
+
 	--////Setup Submenu For Support Requests
-	SupportMenuMain = missionCommands.addSubMenuForCoalition(coalition.side.BLUE, "Request Support", nil)
+	--SupportMenuMain = missionCommands.addSubMenuForCoalition(coalition.side.BLUE, "Request Support", nil)
 	--SupportMenuCAP  = missionCommands.addSubMenuForCoalition(coalition.side.BLUE, "Request Fighter Support", SupportMenuMain)
 	--SupportMenuCAS  = missionCommands.addSubMenuForCoalition(coalition.side.BLUE, "Request Close Air Support", SupportMenuMain)
 	--SupportMenuASS  = missionCommands.addSubMenuForCoalition(coalition.side.BLUE, "Request Anti-Shipping Support", SupportMenuMain)
 	--SupportMenuSEAD = missionCommands.addSubMenuForCoalition(coalition.side.BLUE, "Request SEAD Support", SupportMenuMain)
 	--SupportMenuPIN = missionCommands.addSubMenuForCoalition(coalition.side.BLUE, "Request Pinpoint Strike", SupportMenuMain)
-	SupportMenuDrone = missionCommands.addSubMenuForCoalition(coalition.side.BLUE, "Request MQ-9 Reaper Drone", SupportMenuMain)
+	--SupportMenuDrone = missionCommands.addSubMenuForCoalition(coalition.side.BLUE, "Request MQ-9 Reaper Drone", SupportMenuMain)
 
 		--////AI Support Flights Mission Abort Codes
-	SupportMenuAbort = missionCommands.addSubMenuForCoalition(coalition.side.BLUE, "Call Back Support", nil)
+	--SupportMenuAbort = missionCommands.addSubMenuForCoalition(coalition.side.BLUE, "Call Back Support", nil)
 	--missionCommands.addCommandForCoalition(coalition.side.BLUE, "Abort Mission Fighter Screen", SupportMenuAbort, function() AbortCAPMission() end, nil)	
 	--missionCommands.addCommandForCoalition(coalition.side.BLUE, "Abort Mission Close Air Support", SupportMenuAbort, function() AbortCASMission() end, nil)
 	--missionCommands.addCommandForCoalition(coalition.side.BLUE, "Abort Mission Anti-Shipping", SupportMenuAbort, function() AbortASSMission() end, nil)
 	--missionCommands.addCommandForCoalition(coalition.side.BLUE, "Abort Mission SEAD", SupportMenuAbort, function() AbortSEADMission() end, nil)
 	--missionCommands.addCommandForCoalition(coalition.side.BLUE, "Abort Mission Pinpoint Strike", SupportMenuAbort, function() AbortPINMission() end, nil)
-	missionCommands.addCommandForCoalition(coalition.side.BLUE, "Abort Mission MQ-9 Reaper Drone", SupportMenuAbort, function() AbortDroneMission() end, nil)
+	--missionCommands.addCommandForCoalition(coalition.side.BLUE, "Abort Mission MQ-9 Reaper Drone", SupportMenuAbort, function() AbortDroneMission() end, nil)
 	
 	--////Setup Menu Option To Get The Current Objective
-	missionCommands.addCommandForCoalition(coalition.side.BLUE, "Check Current Objectives", nil, function() CheckObjectiveRequest() end, nil)
+	--missionCommands.addCommandForCoalition(coalition.side.BLUE, "Check Current Objectives", nil, function() CheckObjectiveRequest() end, nil)
 	--////Target Report to get target numbers and coordinates 
-	missionCommands.addCommandForCoalition(coalition.side.BLUE, "Target 1 Report", nil, function() Target1Report() end, nil)
-	missionCommands.addCommandForCoalition(coalition.side.BLUE, "Target 2 Report", nil, function() Target2Report() end, nil)
-	missionCommands.addCommandForCoalition(coalition.side.BLUE, "Target 3 Report", nil, function() Target3Report() end, nil)
+	--missionCommands.addCommandForCoalition(coalition.side.BLUE, "Target 1 Report", nil, function() Target1Report() end, nil)
+	--missionCommands.addCommandForCoalition(coalition.side.BLUE, "Target 2 Report", nil, function() Target2Report() end, nil)
+	--missionCommands.addCommandForCoalition(coalition.side.BLUE, "Target 3 Report", nil, function() Target3Report() end, nil)
 	--////Drop Smoke On The Target
 	--missionCommands.addCommandForCoalition(coalition.side.BLUE, "Flare Current Objective", nil, function() SEF_TargetSmoke() end, nil)
 	
 	
 	--////Clear Field Mission Options
-	ClearFieldOptions = missionCommands.addSubMenuForCoalition(coalition.side.BLUE, "Clear Field Options", nil)
+	--ClearFieldOptions = missionCommands.addSubMenuForCoalition(coalition.side.BLUE, "Clear Field Options", nil)
 	--ClearFieldCAPOptions = missionCommands.addSubMenuForCoalition(coalition.side.BLUE, "Clear Field CAP Options", ClearFieldOptions)
 	--ClearFieldSNDOptions = missionCommands.addSubMenuForCoalition(coalition.side.BLUE, "Clear Field Sound Options", ClearFieldOptions)
 	--ClearFieldCAPKutaisi = missionCommands.addCommandForCoalition(coalition.side.BLUE, "Enable Kutaisi Vipers", ClearFieldCAPOptions, function() SEF_KutaisiCAP() end, nil)
@@ -2049,11 +1805,11 @@ function SEF_RadioMenuSetup()
 	--ClearFieldFleetBugs = missionCommands.addCommandForCoalition(coalition.side.BLUE, "Enable Fleet Hornets", ClearFieldCAPOptions, function() SEF_FleetHornets() end, nil)
 	--ClearFieldToggleFiringSounds = missionCommands.addCommandForCoalition(coalition.side.BLUE, "Toggle Firing Sounds", ClearFieldSNDOptions, function() SEF_ToggleFiringSounds() end, nil)
 	--local ClearFieldDisableShips  = missionCommands.addCommandForCoalition(coalition.side.BLUE, "Naval Ships AI Off", ClearFieldOptions, function() SEF_DisableShips() end, nil)
-	ClearFieldDefenceCheck  = missionCommands.addCommandForCoalition(coalition.side.BLUE, "Check Defence Networks", ClearFieldOptions, function() SEF_CheckDefenceNetwork() end, nil)
-	ClearFieldAirfieldCheck  = missionCommands.addCommandForCoalition(coalition.side.BLUE, "Check Airfield Status", ClearFieldOptions, function() SEF_CheckAirfieldStatus() end, nil)
-	ClearFieldSkipScenario  = missionCommands.addCommandForCoalition(coalition.side.BLUE, "Abort Mission 1", ClearFieldOptions, function() SEF_SkipMission1() end, nil)
-	ClearFieldSkipScenario  = missionCommands.addCommandForCoalition(coalition.side.BLUE, "Abort Mission 2", ClearFieldOptions, function() SEF_SkipMission2() end, nil)
-	ClearFieldSkipScenario  = missionCommands.addCommandForCoalition(coalition.side.BLUE, "Abort Mission 3", ClearFieldOptions, function() SEF_SkipMission3() end, nil)
+	--ClearFieldDefenceCheck  = missionCommands.addCommandForCoalition(coalition.side.BLUE, "Check Defence Networks", ClearFieldOptions, function() SEF_CheckDefenceNetwork() end, nil)
+	--ClearFieldAirfieldCheck  = missionCommands.addCommandForCoalition(coalition.side.BLUE, "Check Airfield Status", ClearFieldOptions, function() SEF_CheckAirfieldStatus() end, nil)
+	--ClearFieldSkipScenario  = missionCommands.addCommandForCoalition(coalition.side.BLUE, "Abort Mission 1", ClearFieldOptions, function() SEF_SkipMission1() end, nil)
+	--ClearFieldSkipScenario  = missionCommands.addCommandForCoalition(coalition.side.BLUE, "Abort Mission 2", ClearFieldOptions, function() SEF_SkipMission2() end, nil)
+	--ClearFieldSkipScenario  = missionCommands.addCommandForCoalition(coalition.side.BLUE, "Abort Mission 3", ClearFieldOptions, function() SEF_SkipMission3() end, nil)
 		
 	--////CAP Support Sector List
 	--missionCommands.addCommandForCoalition(coalition.side.BLUE, "Sector Gori", SupportMenuCAP, function() RequestFighterSupport('Gori') end, nil)
@@ -2116,17 +1872,17 @@ function SEF_RadioMenuSetup()
 	--missionCommands.addCommandForCoalition(coalition.side.BLUE, "Sector Zugdidi", SupportMenuPIN, function() RequestPINSupport('Zugdidi') end, nil)
 
 	--////DRONE Support Sector List
-	missionCommands.addCommandForCoalition(coalition.side.BLUE, "Sector Gori", SupportMenuDrone, function() RequestDroneSupport('Gori') end, nil)
-	missionCommands.addCommandForCoalition(coalition.side.BLUE, "Sector Gudauta", SupportMenuDrone, function() RequestDroneSupport('Gudauta') end, nil)
-	missionCommands.addCommandForCoalition(coalition.side.BLUE, "Sector Kvemo-Roka", SupportMenuDrone, function() RequestDroneSupport('Kvemo Roka') end, nil)
-	missionCommands.addCommandForCoalition(coalition.side.BLUE, "Sector Ochamchira", SupportMenuDrone, function() RequestDroneSupport('Ochamchira') end, nil)
-	missionCommands.addCommandForCoalition(coalition.side.BLUE, "Sector Sochi", SupportMenuDrone, function() RequestDroneSupport('Sochi') end, nil)
-	missionCommands.addCommandForCoalition(coalition.side.BLUE, "Sector Sukhumi", SupportMenuDrone, function() RequestDroneSupport('Sukhumi') end, nil)
-	missionCommands.addCommandForCoalition(coalition.side.BLUE, "Sector Tkvarcheli", SupportMenuDrone, function() RequestDroneSupport('Tkvarcheli') end, nil)
-	missionCommands.addCommandForCoalition(coalition.side.BLUE, "Sector Tskhinvali", SupportMenuDrone, function() RequestDroneSupport('Tskhinvali') end, nil)
-	missionCommands.addCommandForCoalition(coalition.side.BLUE, "Sector Zemo-Azhara", SupportMenuDrone, function() RequestDroneSupport('Zemo Azhara') end, nil)
-	missionCommands.addCommandForCoalition(coalition.side.BLUE, "Sector Zugdidi", SupportMenuDrone, function() RequestDroneSupport('Zugdidi') end, nil)	
-end
+	--missionCommands.addCommandForCoalition(coalition.side.BLUE, "Sector Gori", SupportMenuDrone, function() RequestDroneSupport('Gori') end, nil)
+	--missionCommands.addCommandForCoalition(coalition.side.BLUE, "Sector Gudauta", SupportMenuDrone, function() RequestDroneSupport('Gudauta') end, nil)
+	--missionCommands.addCommandForCoalition(coalition.side.BLUE, "Sector Kvemo-Roka", SupportMenuDrone, function() RequestDroneSupport('Kvemo Roka') end, nil)
+	--missionCommands.addCommandForCoalition(coalition.side.BLUE, "Sector Ochamchira", SupportMenuDrone, function() RequestDroneSupport('Ochamchira') end, nil)
+	--missionCommands.addCommandForCoalition(coalition.side.BLUE, "Sector Sochi", SupportMenuDrone, function() RequestDroneSupport('Sochi') end, nil)
+	--missionCommands.addCommandForCoalition(coalition.side.BLUE, "Sector Sukhumi", SupportMenuDrone, function() RequestDroneSupport('Sukhumi') end, nil)
+	--missionCommands.addCommandForCoalition(coalition.side.BLUE, "Sector Tkvarcheli", SupportMenuDrone, function() RequestDroneSupport('Tkvarcheli') end, nil)
+	--missionCommands.addCommandForCoalition(coalition.side.BLUE, "Sector Tskhinvali", SupportMenuDrone, function() RequestDroneSupport('Tskhinvali') end, nil)
+	--missionCommands.addCommandForCoalition(coalition.side.BLUE, "Sector Zemo-Azhara", SupportMenuDrone, function() RequestDroneSupport('Zemo Azhara') end, nil)
+	--missionCommands.addCommandForCoalition(coalition.side.BLUE, "Sector Zugdidi", SupportMenuDrone, function() RequestDroneSupport('Zugdidi') end, nil)	
+
 
 --////End Radio Menu Functions
 --////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -2437,33 +2193,33 @@ end
 --////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 --////TARGET SMOKE FUNCTIONS
 
-function SEF_TargetSmokeLock()
-	TargetSmokeLockout = 1
+function SEF_Target1SmokeLock()
+	Target1SmokeLockout = 1
 end
 
-function SEF_TargetSmokeUnlock()
-	TargetSmokeLockout = 0
+function SEF_Target1SmokeUnlock()
+	Target1SmokeLockout = 0
 end
 
-function SEF_TargetSmoke()
+function SEF_Target1Smoke()
 	
-	if ( TargetSmokeLockout == 0 ) then
+	if ( Target1SmokeLockout == 0 ) then
 		if ( AGTargetTypeStatic == false and AGMissionTarget ~= nil ) then
 			--TARGET IS NOT STATIC					
 			if ( GROUP:FindByName(AGMissionTarget):IsAlive() == true ) then
 				--GROUP VALID
 				SEFTargetSmokeGroupCoord = GROUP:FindByName(AGMissionTarget):GetCoordinate()
-				SEFTargetSmokeGroupCoord:SmokeRed()
+				SEFTargetSmokeGroupCoord:FlareRed()
 				--SEFTargetSmokeGroupCoord:SmokeBlue()
 				--SEFTargetSmokeGroupCoord:SmokeGreen()
 				--SEFTargetSmokeGroupCoord:SmokeOrange()
 				--SEFTargetSmokeGroupCoord:SmokeWhite()
-				trigger.action.outSound('Target Smoke.ogg')
-				trigger.action.outText("Target Has Been Marked With Red Flare", 15)
-				SEF_TargetSmokeLock()
-				timer.scheduleFunction(SEF_TargetSmokeUnlock, 53, timer.getTime() + 300)				
+				--trigger.action.outSound('Target Smoke.ogg')
+				trigger.action.outText("Objective Alpha Been Marked With Red Flare", 15)
+				SEF_Target1SmokeLock()
+				timer.scheduleFunction(SEF_Target1SmokeUnlock, 53, timer.getTime() + 300)				
 			else			
-				trigger.action.outText("Target Flare Currently Unavailable - Unable To Acquire Target Group", 15)						
+				trigger.action.outText("Target Flares Currently Unavailable - Unable To Acquire Target Group", 15)						
 			end		
 		elseif ( AGTargetTypeStatic == true and AGMissionTarget ~= nil ) then		
 			--TARGET IS STATIC		
@@ -2476,10 +2232,120 @@ function SEF_TargetSmoke()
 				--SEFTargetSmokeStaticCoord:SmokeGreen()
 				--SEFTargetSmokeStaticCoord:SmokeOrange()
 				--SEFTargetSmokeStaticCoord:SmokeWhite()				
-				trigger.action.outSound('Target Smoke.ogg')
-				trigger.action.outText("Target Has Been Marked With Red Flare", 15)
-				SEF_TargetSmokeLock()
-				timer.scheduleFunction(SEF_TargetSmokeUnlock, 53, timer.getTime() + 300)				
+				--trigger.action.outSound('Target Smoke.ogg')
+				trigger.action.outText("Objective Alpha Has Been Marked With Red Flare", 15)
+				SEF_Target1SmokeLock()
+				timer.scheduleFunction(SEF_Target1SmokeUnlock, 53, timer.getTime() + 300)				
+			else
+				trigger.action.outText("Target Flare Currently Unavailable - Unable To Acquire Target Building", 15)	
+			end			
+		else		
+			trigger.action.outText("Target Flare Currently Unavailable - No Valid Targets", 15)
+		end
+	else
+		trigger.action.outText("Target Flare Currently Unavailable - Flares Are Being Reloaded", 15)
+	end	
+end
+
+
+function SEF_Target2SmokeLock()
+	Target2SmokeLockout = 1
+end
+
+function SEF_Target2SmokeUnlock()
+	Target2SmokeLockout = 0
+end
+
+function SEF_Target2Smoke()
+	
+	if ( Target2SmokeLockout == 0 ) then
+		if ( AGTarget2TypeStatic == false and AGMission2Target ~= nil ) then
+			--TARGET IS NOT STATIC					
+			if ( GROUP:FindByName(AGMission2Target):IsAlive() == true ) then
+				--GROUP VALID
+				SEFTargetSmokeGroupCoord = GROUP:FindByName(AGMission2Target):GetCoordinate()
+				SEFTargetSmokeGroupCoord:FlareRed()
+				--SEFTargetSmokeGroupCoord:SmokeBlue()
+				--SEFTargetSmokeGroupCoord:SmokeGreen()
+				--SEFTargetSmokeGroupCoord:SmokeOrange()
+				--SEFTargetSmokeGroupCoord:SmokeWhite()
+				--trigger.action.outSound('Target Smoke.ogg')
+				trigger.action.outText("Objective Bravo Has Been Marked With Red Flare", 15)
+				SEF_Target2SmokeLock()
+				timer.scheduleFunction(SEF_Target2SmokeUnlock, 53, timer.getTime() + 300)				
+			else			
+				trigger.action.outText("Target Flares Currently Unavailable - Unable To Acquire Target Group", 15)						
+			end		
+		elseif ( AGTarget2TypeStatic == true and AGMission2Target ~= nil ) then		
+			--TARGET IS STATIC		
+			if ( StaticObject.getByName(AGMission2Target) ~= nil and StaticObject.getByName(AGMission2Target):isExist() == true ) then
+				--STATIC IS VALID
+				SEFTargetSmokeStaticCoord = STATIC:FindByName(AGMission2Target):GetCoordinate()
+				SEFTargetSmokeStaticCoord:FlareRed()
+				--SEFTargetSmokeStaticCoord:SmokeRed()
+				--SEFTargetSmokeStaticCoord:SmokeBlue()
+				--SEFTargetSmokeStaticCoord:SmokeGreen()
+				--SEFTargetSmokeStaticCoord:SmokeOrange()
+				--SEFTargetSmokeStaticCoord:SmokeWhite()				
+				--trigger.action.outSound('Target Smoke.ogg')
+				trigger.action.outText("Objective Charlie Has Been Marked With Red Flare", 15)
+				SEF_Target2SmokeLock()
+				timer.scheduleFunction(SEF_Target2SmokeUnlock, 53, timer.getTime() + 300)				
+			else
+				trigger.action.outText("Target Flare Currently Unavailable - Unable To Acquire Target Building", 15)	
+			end			
+		else		
+			trigger.action.outText("Target Flare Currently Unavailable - No Valid Targets", 15)
+		end
+	else
+		trigger.action.outText("Target Flare Currently Unavailable - Flares Are Being Reloaded", 15)
+	end	
+end
+
+
+function SEF_Target3SmokeLock()
+	Target3SmokeLockout = 1
+end
+
+function SEF_Target3SmokeUnlock()
+	Target3SmokeLockout = 0
+end
+
+function SEF_Target3Smoke()
+	
+	if ( Target3SmokeLockout == 0 ) then
+		if ( AGTarget3TypeStatic == false and AGMission3Target ~= nil ) then
+			--TARGET IS NOT STATIC					
+			if ( GROUP:FindByName(AGMission3Target):IsAlive() == true ) then
+				--GROUP VALID
+				SEFTargetSmokeGroupCoord = GROUP:FindByName(AGMission3Target):GetCoordinate()
+				SEFTargetSmokeGroupCoord:FlareRed()
+				--SEFTargetSmokeGroupCoord:SmokeBlue()
+				--SEFTargetSmokeGroupCoord:SmokeGreen()
+				--SEFTargetSmokeGroupCoord:SmokeOrange()
+				--SEFTargetSmokeGroupCoord:SmokeWhite()
+				--trigger.action.outSound('Target Smoke.ogg')
+				trigger.action.outText("Objective Alpha Been Marked With Red Flare", 15)
+				SEF_Target3SmokeLock()
+				timer.scheduleFunction(SEF_Target3SmokeUnlock, 53, timer.getTime() + 300)				
+			else			
+				trigger.action.outText("Target Flares Currently Unavailable - Unable To Acquire Target Group", 15)						
+			end		
+		elseif ( AGTarget3TypeStatic == true and AGMission3Target ~= nil ) then		
+			--TARGET IS STATIC		
+			if ( StaticObject.getByName(AGMission3Target) ~= nil and StaticObject.getByName(AGMission3Target):isExist() == true ) then
+				--STATIC IS VALID
+				SEFTargetSmokeStaticCoord = STATIC:FindByName(AGMission3Target):GetCoordinate()
+				SEFTargetSmokeStaticCoord:FlareRed()
+				--SEFTargetSmokeStaticCoord:SmokeRed()
+				--SEFTargetSmokeStaticCoord:SmokeBlue()
+				--SEFTargetSmokeStaticCoord:SmokeGreen()
+				--SEFTargetSmokeStaticCoord:SmokeOrange()
+				--SEFTargetSmokeStaticCoord:SmokeWhite()				
+				--trigger.action.outSound('Target Smoke.ogg')
+				trigger.action.outText("Objective Alpha Been Marked With Red Flare", 15)
+				SEF_Target3SmokeLock()
+				timer.scheduleFunction(SEF_Target3SmokeUnlock, 53, timer.getTime() + 300)				
 			else
 				trigger.action.outText("Target Flare Currently Unavailable - Unable To Acquire Target Building", 15)	
 			end			
@@ -2521,7 +2387,10 @@ end
 		OperationComplete = false
 		OnShotSoundsEnabled = 1
 		SoundLockout = 0
-		TargetSmokeLockout = 0
+		Target1SmokeLockout = 0
+		Target2SmokeLockout = 0
+		Target3SmokeLockout = 0
+
 				
 		--////ENABLE CAP/CAS/ASS/SEAD/PIN/DRONE
 		trigger.action.setUserFlag(5001,1)
@@ -2538,7 +2407,7 @@ end
 		SEF_MissionSelector(1)
 		SEF_MissionSelector(2)
 		SEF_MissionSelector(3)
-		SEF_RadioMenuSetup()
+		addRadioCommands()
 		SEF_BLUEAwacsSpawn()
 		SEF_BLUETexacoSpawn()
 		SEF_BLUEShellSpawn()
