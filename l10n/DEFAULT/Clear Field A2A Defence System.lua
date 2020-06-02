@@ -236,7 +236,8 @@ function SEF_REDSQUADRONSSINGLEPLAYER()
 	CAPZoneRed4 = ZONE:New("CAP Zone RED 4")
 	--CAPZoneRed5 = ZONE:New( "CAP Zone RED Kuznetsov" )
 	CAPZoneRedCarrier = ZONE_GROUP:New("CAP Zone Black Sea Fleet", GROUP:FindByName("CV 1143.5 Admiral Kuznetsov"), 75000)
-	CAPZoneRed6 = ZONE_POLYGON:New("CAP Zone RED 6", GROUP:FindByName("CAP Zone RED 6"))
+	CAPZoneRed6 = ZONE:New("CAP Zone RED 6")
+	--CAPZoneRed6 = ZONE_POLYGON:New("CAP Zone RED 6", GROUP:FindByName("CAP Zone RED 6"))
 
 	-- ZONE 1 Gudauta 			- Alpha
 	-- ZONE 2 Nalchik 			- Beta
