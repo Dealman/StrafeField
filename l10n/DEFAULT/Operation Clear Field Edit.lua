@@ -422,27 +422,32 @@ function TargetReport(PlayerGroup, TaskNumber)
 			SZMessage = "Nothing to report"		
 		end		
 			
-		BRMessage = ", Bearing: "..PlayerBR
+		BRMessage = ", bearing: "..PlayerBR
 		ELEMessage = "Elevation: "..TargetHeight.."m".." / "..TargetHeightFt.."ft"
 		PlayersAssigned = A2G_Task[TaskNumber]:GetPilots()
 					
 		_SETTINGS:SetLL_Accuracy(0)
-		CoordStringLLDMS = TargetCoord:ToStringLLDMS(SETTINGS:SetImperial())
+		StandardFormat = TargetCoord:ToStringLLDMS(SETTINGS:SetImperial())
 		_SETTINGS:SetLL_Accuracy(3)
-		CoordStringLLDDM = TargetCoord:ToStringLLDDM(SETTINGS:SetImperial())
+		F16Format = TargetCoord:ToStringLLDDM(SETTINGS:SetImperial())
 		_SETTINGS:SetLL_Accuracy(2)
-		CoordStringLLDMSDS = TargetCoord:ToStringLLDMSDS(SETTINGS:SetImperial())
+		F18Format_Precise = TargetCoord:ToStringLLDMSDS(SETTINGS:SetImperial())
+		_SETTINGS:SetLL_Accuracy(1)
+		JF17Format = TargetCoord:ToStringLLDMSDS(SETTINGS:SetImperial())  
 
+		trigger.action.outTextForGroup(ClientGroupID, PlaneType, 40)
 
 		trigger.action.outTextForGroup(ClientGroupID, "Target Report for "..(TaskNumber == 1 and "Objective Alpha" or TaskNumber == 2 and "Objective Bravo" or TaskNumber == 3 and "Objective Charlie"), 40)
 		if (PlaneType == "F-16C_50") then
-			trigger.action.outTextForGroup(ClientGroupID, Briefing.."\n"..SZMessage.."\n".."\n"..CoordStringLLDDM.."\n".."\n"..ELEMessage..BRMessage.."\n".."\nPilots Assigned:\n"..PlayersAssigned, 40)
-		elseif (PlaneType == "F/A-18C_hornet") then
-			trigger.action.outTextForGroup(ClientGroupID, Briefing.."\n"..SZMessage.."\n".."\n"..CoordStringLLDDM.."\n".."\n"..ELEMessage..BRMessage.."\n".."\nPilots Assigned:\n"..PlayersAssigned, 40)
+			trigger.action.outTextForGroup(ClientGroupID, Briefing..BRMessage.."\n"..SZMessage.."\n".."\n"..F16Format.."\n".."\n"..ELEMessage.."\n".."\nPilots Assigned:\n"..PlayersAssigned, 40)
+		elseif (PlaneType == "FA-18C_hornet") then
+			trigger.action.outTextForGroup(ClientGroupID, Briefing..BRMessage.."\n"..SZMessage.."\n".."\n"..F18Format_Precise.."\n".."\n"..ELEMessage.."\n".."\nPilots Assigned:\n"..PlayersAssigned, 40)
 		elseif (PlaneType == "Su-25T") then
-			trigger.action.outTextForGroup(ClientGroupID, Briefing.."\n"..SZMessage.."\n".."\n"..ELEMessage..BRMessage.."\n".."\nPilots Assigned:\n"..PlayersAssigned, 40)
+			trigger.action.outTextForGroup(ClientGroupID, Briefing..BRMessage.."\n"..SZMessage.."\n".."\n"..ELEMessage.."\n".."\nPilots Assigned:\n"..PlayersAssigned, 40)
+		elseif (PlaneType == "JF-17") then
+			trigger.action.outTextForGroup(ClientGroupID, Briefing..BRMessage.."\n"..SZMessage.."\n".."\n"..JF17Format.."\n".."\n"..ELEMessage.."\n".."\nPilots Assigned:\n"..PlayersAssigned, 40)
 		else
-			trigger.action.outTextForGroup(ClientGroupID, Briefing.."\n"..SZMessage.."\n".."\n"..CoordStringLLDMS.."\n"..CoordStringLLDDM.."\n"..CoordStringLLDMSDS.."\n"..ELEMessage..BRMessage.."\n".."\nPilots Assigned:\n"..PlayersAssigned, 40)
+			trigger.action.outTextForGroup(ClientGroupID, Briefing..BRMessage.."\n"..SZMessage.."\n".."\n"..StandardFormat.."\n"..F16Format.."\n"..F18Format_Precise.."\n"..ELEMessage.."\n".."\nPilots Assigned:\n"..PlayersAssigned, 40)
 		end
 	elseif ( OperationComplete == true ) then
 		trigger.action.outText("The Operation Has Been Completed, There Are No Further Targets", 15)	

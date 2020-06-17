@@ -52,7 +52,7 @@ options =
         ["avionicsLanguage"] = "english",
         ["weapons"] = false,
         ["setGlobal"] = true,
-        ["labels"] = 3,
+        ["labels"] = 2,
     }, -- end of ["difficulty"]
     ["VR"] = 
     {
@@ -60,10 +60,10 @@ options =
         ["box_mouse_cursor"] = true,
         ["pixel_density"] = 1,
         ["use_mouse"] = true,
-        ["msaaMaskSize"] = 0.42,
+        ["msaaMaskSize"] = 0.65,
         ["prefer_built_in_audio"] = true,
         ["interaction_with_grip_only"] = false,
-        ["bloom"] = true,
+        ["bloom"] = false,
         ["custom_IPD_enable"] = false,
         ["custom_IPD"] = 63.5,
         ["hand_controllers"] = false,
@@ -125,7 +125,7 @@ options =
             ["hmdEye"] = 1,
             ["CPLocalList"] = "default",
             ["F18RealisticTDC"] = false,
-            ["mfdReflections"] = 0,
+            ["mfdReflections"] = 1,
         }, -- end of ["F/A-18C"]
         ["CaptoGlove"] = 
         {
@@ -193,7 +193,7 @@ options =
             ["hmdEye"] = 2,
             ["CPLocalList"] = "default",
             ["canopyTint"] = 0,
-            ["mfdReflections"] = 0,
+            ["mfdReflections"] = 1,
         }, -- end of ["F-16C"]
     }, -- end of ["plugins"]
     ["format"] = 1,
@@ -201,11 +201,11 @@ options =
     {
         ["main_output"] = "{0.0.0.00000000}.{dba50209-a898-4ef4-8b9c-c25934b2d56c}",
         ["FakeAfterburner"] = true,
-        ["volume"] = 23,
+        ["volume"] = 47,
         ["headphones_on_external_views"] = true,
         ["subtitles"] = true,
         ["world"] = 100,
-        ["hear_in_helmet"] = false,
+        ["hear_in_helmet"] = true,
         ["radioSpeech"] = true,
         ["hp_output"] = "{0.0.0.00000000}.{dba50209-a898-4ef4-8b9c-c25934b2d56c}",
         ["cockpit"] = 100,
