@@ -360,7 +360,7 @@ local function CheckObjectiveRequest(PlayerGroup)
 		TargetCoord = TargetGroup:GetCoordinate()
 		PlayerDistance = PlayerCoord:Get2DDistance(TargetCoord)
 		PlayerBR = PlayerCoord:GetDistanceText(PlayerDistance, SETTINGS:SetImperial())
-		trigger.action.outTextForGroup(grpID, (TaskNumber == 1 and "Objective Alpha\n" or TaskNumber == 2 and "Objective Bravo\n" or TaskNumber == 3 and "Objective Charlie\n")..Briefing.." - "..PlayerBR.."\nAssigned Pilots\n", 15)
+		trigger.action.outTextForGroup(grpID, (TaskNumber == 1 and "Objective Alpha\n" or TaskNumber == 2 and "Objective Bravo\n" or TaskNumber == 3 and "Objective Charlie\n") .. Briefing .. " - " .. PlayerBR .. "\nAssigned Pilots\n" .. Pilots, 15)
 
 		TaskNumber = TaskNumber + 1
 	end
